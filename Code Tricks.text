@@ -24,4 +24,20 @@ Free Icon Download-----------------------------------------> https://uxwing.com/
 TailWinds--------------------------------------------------> https://tailwindcss.com/
 
 
+
+
+                                          before Text
+#social-text::after{
+  background: #e74c3c;
+  content: "";
+  display: block;
+  margin: 20px auto;
+  width: 150px;
+  height: 5px;
+}
+
+
+
+
+
 First Project Link----------------------------------------> https://technicalhassanali.github.io/technicalhassanali/

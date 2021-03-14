@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:#ecf0f1;
+            margin-bottom: 10px;
+        }
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .form-style{
+            margin-top:9px;
+        }
+        .detail{
+            font-family: Arial;
+            font-size: 25px;
+            color:black;
+            text-decoration: underline;
+        }
+        #registration-text{
+            text-align: center;
+            font-size:40px;
+            font-family: consolas;
+            color:green;
+            margin-top: 8px;
+        }
+        label{
+            font-family: consolas;
+            font-weight: bold;
+            font-size: 25px;
+            clear:both;
+            margin-left:4px;
+        }
+        input[type=text],[type=number],[type=email]{
+            width: 99%;
+            height:40px;
+            margin:5px;
+            font-size: 25px;
+            border-radius:10px;
+            border:none;
+        }
+        .opt{
+            width: 99%;
+            height:40px;
+            margin:5px;
+            font-size: 20px;
+            border-radius:10px;
+            border:none;
+        }
+        input[type=button]{
+            width: 99%;
+            height:40px;
+            margin:5px;
+            font-size: 20px;
+            border-radius:10px;
+            border:none;
+            background-color:green;
+            color:white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="registration-text">Registration Form</h1>
+    <form action="#">
+
+            <div class="form-style">
+            <label for="studentname">Name</label><br/>
+            <input type="text" placeholder="Enter Name" required/>
+        </div>
+
+        <div class="form-style">
+            <label for="fathername">Father Name:</label><br/>
+            <input type="text" placeholder="Enter Father Name"/>
+        </div>
+
+        <div class="form-style">
+            <label for="phoneno">Phone Number:</label><br/>
+            <input type="number" placeholder="Enter Number"/>
+        </div>
+
+        <div class="form-style">
+            <label for="email">Email Address:</label><br/>
+            <input type="email" placeholder="abc@gmail.com"/>
+        </div>
+
+        <div class="form-style">
+            <label for="Address1">Address No 1:</label><br/>
+            <input type="text" placeholder="Enter Current"/>
+        </div>
+
+        <div class="form-style">
+            <label for="Address2">Address No 2:</label><br/>
+            <input type="text" placeholder="Enter Permanant"/>
+        </div>
+
+        <div class="form-style">
+            <label for="country">Select Country:</label><br/>
+            <select name="" class="opt">
+                <option value="" >Pakistan</option>
+                <option value="">Pakistan</option>
+                <option value="">Pakistan</option>
+                <option value="">Pakistan</option>
+                <option value="">Pakistan</option>
+            </select>
+        </div>
+
+        <div class="form-style">
+            <label for="city">Select City:</label><br/>
+            <select name="" class="opt">
+                <option value="" >M.GARH</option>
+                <option value="">MULTAN</option>
+                <option value="">KARACHI</option>
+                <option value="">DG KHAN</option>
+                <option value="">ALI PUR</option>
+            </select>
+            
+        </div>
+
+        <input type="button" value="Click me" name="save">
+    </form>
+</body>
+</html>

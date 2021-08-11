@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../PrismJs/prism.css">
+    <script src="../PrismJs/prism.js"></script>
+    <script src="../CSS/fontawasome.js"></script>
+</head>
+<body id="darkmode">
+    <div class="topnav">
+
+        <!-- Centered link -->
+        <div class="topnav-centered">
+            <img src="../images/files.png" alt="icon" class="icon logo">
+            <h2 class="content">HTML and CSS Design</h2>
+        </div>
+
+
+        <!-- Right-aligned links -->
+        <div class="topnav-left">
+            <button class="topleft"><a href="index.html" target="_blank">Main File</a></button>
+        </div>
+    
+
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+            <button id="btn-dark" onclick="hassan()">Dark Mode OFF</button>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h1 class="heading1" style="background-color: red;">HTML and CSS</h1>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Fixed Footer Design</h3>
+        </div>
+        <pre class="language-css" ><code >
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+</code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Smooth Scroll</h3>
+        </div>
+        <p>Add scroll-behavior: smooth to the &lt;html&gt; element to enable smooth scrolling for the whole page (note:
+            it is also possible to add it to a specific element/scroll container
+        </p>
+        <pre class="language-css" ><code >
+    html {
+        scroll-behavior: smooth;
+      }
+</code></pre>
+
+        <span class="outputh">Example:</span>
+        <p>You can see in the blow example we created two div and give the id and some styling when one section we click
+            the other section open by using <code class="markcode">scroll-behavior:smooth;</code> adding in css.
+        </p>
+        <pre class="language-html" ><code >
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;style&gt;
+    
+    html {
+        scroll-behavior: smooth;
+      }
+  
+    #section1 {
+        height: 500px;
+        background-color: #130f40;
+        padding: 70px;
+        color:white;
+    }
+    #section2 {
+        padding: 70px;
+        height: 500px;
+        background-color: #f9ca24;
+    }
+    .btn{
+    margin-left:50px;
+    height:40px;
+    line-height:40px;
+    background-color:#f2f2f2;
+    display:inline-block;
+    cursor:pointer;
+    }
+    a{text-decoration:none;}
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;div id="section1"&gt;
+      &lt;h2&gt;Section 1&lt;/h2&gt;
+      &lt;p&gt;Click on the link to see the "smooth" scrolling effect.&lt;/p&gt;
+      &lt;a href="#section2" class="btn"&gt;Click Me to Smooth Scroll to Section 2 Below&lt;/a&gt;
+      &lt;p&gt;Note: Remove the scroll-behavior property to remove smooth scrolling.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    
+    &lt;div id="section2"&gt;
+      &lt;h2&gt;Section 2&lt;/h2&gt;
+      &lt;a href="#section1" class="btn"&gt;Click Me to Smooth Scroll to Section 1 Above&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;    
+</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Label Design</h3>
+        </div>
+
+        <style>
+            .label {
+                color: white;
+                padding: 8px;
+                font-family: Arial;
+                cursor: pointer
+            }
+
+            .success {
+                background-color: #04AA6D;
+            }
+
+            /* Green */
+
+            .info {
+                background-color: #2196F3;
+            }
+
+            /* Blue */
+
+            .warning {
+                background-color: #ff9800;
+            }
+
+            /* Orange */
+
+            .danger {
+                background-color: #f44336;
+            }
+
+            /* Red */
+
+            .other {
+                background-color: #e7e7e7;
+                color: black;
+            }
+
+            /* Gray */
+        </style>
+        <br><br>
+        <span class="label success">Success</span>
+        <span class="label info">Info</span>
+        <span class="label warning">Warning</span>
+        <span class="label danger">Danger</span>
+        <span class="label other">Other</span>
+
+        <br><br>
+        <span class="outputh">Code:</span>
+        <pre><code class="language-html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;style&gt;
+    .label {
+      color: white;
+      padding: 8px;
+      font-family: Arial;
+      cursor:pointer
+    }
+    .success {background-color: #04AA6D;} /* Green */
+    .info {background-color: #2196F3;} /* Blue */
+    .warning {background-color: #ff9800;} /* Orange */
+    .danger {background-color: #f44336;} /* Red */ 
+    .other {background-color: #e7e7e7; color: black;} /* Gray */ 
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;h1&gt;Labels&lt;/h1&gt;
+    
+    &lt;span class="label success"&gt;Success&lt;/span&gt;
+    &lt;span class="label info"&gt;Info&lt;/span&gt;
+    &lt;span class="label warning"&gt;Warning&lt;/span&gt;
+    &lt;span class="label danger"&gt;Danger&lt;/span&gt;
+    &lt;span class="label other"&gt;Other&lt;/span&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Error Message Notes Show</h3>
+        </div>
+        <br />
+        <style>
+            .size {
+                margin-bottom: 15px;
+                padding: 14px 12px;
+            }
+
+            .danger1 {
+                background-color: #ffdddd;
+                border-left: 6px solid #f44336;
+            }
+
+            .success1 {
+                background-color: #ddffdd;
+                border-left: 6px solid #04AA6D;
+            }
+
+            .info1 {
+                background-color: #e7f3fe;
+                border-left: 6px solid #2196F3;
+            }
+
+            .warning1 {
+                background-color: #ffffcc;
+                border-left: 6px solid #ffeb3b;
+            }
+
+            .fa-check-circle {
+                color: green;
+            }
+
+            .fa-info-circle {
+                color: blue;
+            }
+
+            .fa-exclamation-triangle {
+                color: red;
+            }
+        </style>
+
+
+        <div class="danger1 size">
+            <p><i class="fas fa-exclamation-triangle"></i> Some text...</p>
+        </div>
+
+        <div class="success1 size">
+            <p><i class="fas fa-check-circle"></i> Some text...</p>
+        </div>
+
+        <div class="info1 size">
+            <p><i class="fas fa-info-circle"></i> Some text...</p>
+        </div>
+
+        <div class="warning1 size">
+            <p><i class="fas fa-exclamation-triangle"></i> Some text...</p>
+        </div>
+        <pre class="language-html" ><code >
+        &lt;style&gt;
+        .size {
+          margin-bottom: 15px;
+          padding: 14px 12px;
+        }
+        .danger1 {
+          background-color: #ffdddd;
+          border-left: 6px solid #f44336;
+        }
+        .success1 {
+          background-color: #ddffdd;
+          border-left: 6px solid #04AA6D;
+        }
+        .info1 {
+          background-color: #e7f3fe;
+          border-left: 6px solid #2196F3;
+        }
+         .warning1 {
+          background-color: #ffffcc;
+          border-left: 6px solid #ffeb3b;
+        }
+        .fa-check-circle{color:green; }
+        .fa-info-circle{ color:blue;}
+        .fa-exclamation-triangle{color:red;}
+        &lt;/style&gt;
+        
+    
+        &lt;div class="danger1 size"&gt;
+          &lt;p&gt;&lt;i class="fas fa-exclamation-triangle"&gt;&lt;/i&gt; Some text...&lt;/p&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="success1 size"&gt;
+          &lt;p&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt;  Some text...&lt;/p&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="info1 size"&gt;
+          &lt;p&gt;&lt;i class="fas fa-info-circle"&gt;&lt;/i&gt; Some text...&lt;/p&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="warning1 size"&gt;
+          &lt;p&gt;&lt;i class="fas fa-exclamation-triangle"&gt;&lt;/i&gt; Some text...&lt;/p&gt;
+        &lt;/div&gt;
+    </code></pre>
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Callout Message</h3>
+        </div>
+
+        <pre class="language-html" ><code >
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;style&gt;
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        .callout {
+          position: fixed;
+          bottom: 35px;
+          right: 20px;
+          margin-left: 20px;
+          max-width: 300px;
+        
+        }
+        .callout-header {
+          padding: 15px 15px;
+          background: green;
+          font-size: 30px;
+          color: white;
+           border-radius:15px 15px 0  0;
+        }
+        .callout-container {
+          padding: 15px;
+          background-color: #ccc;
+          color: black;
+          border-radius:0 0 15px 15px;
+        }
+        .closebtn {
+          position: absolute;
+          top: 5px;
+          right: 15px;
+          color: white;
+          font-size: 30px;
+          cursor: pointer;
+        }
+        .closebtn:hover {
+          color: lightgrey;
+        }
+        &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;       
+        &lt;div class="callout"&gt;       
+          &lt;div class="callout-header"&gt;Callout Header&lt;/div&gt;
+          &lt;span class="closebtn" onclick="this.parentElement.style.display='none';"&gt;×&lt;/span&gt;
+          &lt;div class="callout-container"&gt;
+            &lt;p&gt;Some text to describe the callout message. 
+            &lt;a href="#"&gt;Learn more&lt;/a&gt; or close it if it is in your way.&lt;/p&gt;
+          &lt;/div&gt;                  
+        &lt;/div&gt;       
+        &lt;/body&gt;
+        &lt;/html&gt;        
+    </code></pre>
+
+    <div class="heading2" style="color: white; background-color: blue">
+        <h3>ToolTip Design</h3>
+    </div>
+<p>a message which appears when a cursor is positioned over an icon, image, hyperlink, or other element in a graphical user interface.</p>
+    <pre class="language-html" ><code >
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;style&gt;
+        .tooltip {
+          position: relative;
+          display: inline-block;
+          border-bottom: 1px solid black;
+        }       
+        .tooltip .tooltiptext {       
+          visibility: hidden;
+          width: 120px;
+          background-color: black;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+        
+          /* Position the tooltip */
+          position: absolute;
+          z-index: 1;
+        }
+        
+        
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+        }
+        
+        &lt;/style&gt;
+        &lt;body style="text-align:center;"&gt;
+        
+        &lt;div class="tooltip"&gt;Hover over me
+          &lt;span class="tooltiptext"&gt;Tooltip text&lt;/span&gt;
+        &lt;/div&gt;
+        
+        
+        &lt;/body&gt;
+        &lt;/html&gt;
+        
+</code></pre>
+
+<p><strong>Left &amp; Right Position of Tooltip:</strong></p>
+<p>In Left Position you can change the right property to left and in right you can change left to right
+    property in css.
+</p>
+<pre class="language-css" ><code >
+    .tooltip .tooltiptext {
+        top: -5px;
+        right: 105%;  /* Change Position right : 105%; */
+      }
+</code></pre>
+
+<p><strong>Top &amp; Bottom Position of Tooltip:</strong></p>
+<p>In Change the Position you can simply change the bottom,top property of css.</p>
+<pre class="language-css" ><code >
+    .tooltip .tooltiptext {
+        width: 120px;
+        bottom: 100%; /*In Top top: 100%; */
+        left: 50%;
+        margin-left: -60px; 
+        /* Use half of the width (120/2 = 60), to center the tooltip */
+      }
+</code></pre>
+
+
+
+<p><strong>Arrow Position of Tooltip in Top, Bottom , Left, Right:</strong></p>
+<p>In Arrow Position you can just change the </p>
+<pre class="language-css" ><code >
+  /*Top Arrow ToolTip*/
+  .tooltip .tooltiptext {
+    top: 150%;
+      left: 50%;
+      margin-left: -60px;
+          }
+    /* Adding Arrow Blow the  tooltiptext */
+     .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent black transparent;
+    }
+_________________________________________________________________________
+    /*Bottom Arrow ToolTip*/
+    .tooltip .tooltiptext {
+        bottom: 150%;
+      left: 50%;
+      margin-left: -60px;
+          }
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+    }
+    
+_________________________________________________________________________
+    /*Left Arrow ToolTip*/
+    .tooltip .tooltiptext {
+        top: -5px;
+          right: 110%;
+              }
+        .tooltip .tooltiptext::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 100%;
+          margin-top: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: transparent transparent transparent black;
+        }
+_________________________________________________________________________
+    /*Right Arrow ToolTip*/
+    .tooltip .tooltiptext {
+        top: -5px;
+          left: 110%;
+              }
+        .tooltip .tooltiptext::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 100%;
+          margin-top: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: transparent black transparent transparent;
+        } 
+_________________________________________________________________________
+</code></pre>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <img src="../images/arrowup.png" class="back-top" />
+    </button>
+    <script src="../js/javaScript.js"></script>
+</body>
+</html>

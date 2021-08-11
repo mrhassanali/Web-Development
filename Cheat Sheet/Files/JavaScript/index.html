@@ -1,0 +1,3605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript CheatSheet</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../PrismJs/prism.css">
+    <script src="../PrismJs/prism.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body id="darkmode">
+    <!-- Top navigation -->
+    <div class="topnav">
+
+        <!-- Centered link -->
+        <div class="topnav-centered">
+            <img src="../images/files.png" alt="icon" class="icon logo">
+            <h2 class="content">JavaScript CheatSheet</h2>
+        </div>
+
+
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+            <button id="btn-dark" onclick="hassan()">Dark Mode OFF</button>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <h1 class="heading1" style="background-color: red;">JavaScript Introduction</h1>
+
+        <h3 class="marku">On Page Script</h3>
+        <p>Adding internal JavaScript to HTML</p>
+        <pre class="language-markup"><code>&lt;script type="text/javascript"&gt; //JS code goes here &lt;/script&gt;
+        </code></pre>
+        <h3 class="marku">External JS File</h3>
+        <p>Adding external JavaScript to HTML</p>
+        <pre class="language-markup"><code>&lt;script src="filename.js"&gt;&lt;/script&gt;</code></pre>
+        <h3 class="marku">Functions</h3>
+        <p>JavaScript Function syntax</p>
+        <pre class="language-javascript"><code>function nameOfFunction () {
+        // function body
+        }</code></pre>
+        <h3 class="marku">DOM Element</h3>
+        <p>Changing content of a DOM Element</p>
+        <pre
+            class="language-javascript"><code>document.getElementById("elementID").innerHTML = "Hello World!";</code></pre>
+        <h3 class="marku">Output</h3>
+        <p>This will print the value of a in JavaScript console</p>
+        <pre class="language-javascript"><code>console.log(a);</code></pre>
+        <h2>Conditional Statements</h2>
+        <p>Conditional statements are used to perform operations based on some conditions.</p>
+        <h3 class="marku">If Statement</h3>
+        <p>The block of code to be executed, when the condition specified is true.</p>
+        <pre class="language-javascript"><code>if (condition) {
+        // block of code to be executed if the condition is true
+        }</code></pre>
+        <h3 class="marku">If-else Statement</h3>
+        <p>If the condition for the if block is false, then the else block will be executed.</p>
+        <pre class="language-javascript"><code>if (condition) {
+        // block of code to be executed if the condition is true
+        } else {
+        // block of code to be executed if the condition is false
+        }</code></pre>
+        <h3 class="marku">Else-if Statement</h3>
+        <p>A basic if-else ladder</p>
+<pre class="language-javascript"><code>if (condition1) {
+// block of code to be executed if condition1 is true
+} else if (condition2) {
+// block of code to be executed if the condition1 is false and condition2 is true
+} else {
+// block of code to be executed if the condition1 is false and condition2 is false
+}</code></pre>
+        <h3 class="marku">Switch Statement</h3>
+        <p>Switch case statement in JavaScript</p>
+<pre class="language-javascript"><code>switch(expression) {
+        case x:
+        // code block
+        break;
+        case y:
+        // code block
+        break;
+        default:
+        // code block
+}</code></pre>
+        <h2>Iterative Statements (Loops)</h2>
+        <p>Iterative statement facilitates programmer to execute any block of code lines repeatedly and can be
+            controlled as per conditions added by the programmer.</p>
+        <h3 class="marku">For Loop</h3>
+        <p>For loop syntax in javascript</p>
+        <pre class="language-javascript"><code>for (statement 1; statement 2; statement 3) {
+        // code block to be executed
+        }</code></pre>
+        <h3 class="marku">While Loop</h3>
+        <p>Runs the code till the specified condition is true</p>
+        <pre class="language-javascript"><code>while (condition) {
+        // code block to be executed
+        }</code></pre>
+        <h3 class="marku">Do While Loop</h3>
+        <p>A do while loop is executed at least once despite the condition being true or false</p>
+        <pre class="language-javascript"><code>do {
+        // run this code in block
+        i++;
+        } while (condition);</code></pre>
+        <h2>Strings</h2>
+        <p>The string is a sequence of characters that is used for storing and managing text data.</p>
+        <h3 class="marku">charAt method</h3>
+        <p>Returns the character from the specified index.</p>
+        <pre class="language-javascript"><code>str.charAt(3)</code></pre>
+        <h3 class="marku">concat method</h3>
+        <p>Joins two or more strings together.</p>
+        <pre class="language-javascript"><code>str1.concat(str2)</code></pre>
+        <h3 class="marku">index of method</h3>
+        <p>Returns the index of the first occurrence of the specified character from the string else -1 if not found.
+        </p>
+        <pre class="language-javascript"><code>str.indexOf('substr')</code></pre>
+        <h3 class="marku">match method</h3>
+        <p>Searches a string for a match against a regular expression.</p>
+        <pre class="language-javascript"><code>str.match(/(chapter \d+(\.\d)*)/i;)</code></pre>
+        <h3 class="marku">replace method</h3>
+        <p>Searches a string for a match against a specified string or char and returns a new string by replacing the
+            specified values.</p>
+        <pre class="language-javascript"><code>str1.replace(str2)</code></pre>
+        <h3 class="marku">search method</h3>
+        <p>Searches a string against a specified value.</p>
+        <pre class="language-javascript"><code>str.search('term')</code></pre>
+        <h3 class="marku">split method</h3>
+        <p>Splits a string into an array consisting of substrings.</p>
+        <pre class="language-javascript"><code>str.split('\n')</code></pre>
+        <h3 class="marku">substring method</h3>
+        <p>Returns a substring of a string containing characters from the specified indices.</p>
+        <pre class="language-javascript"><code>str.substring(0,5)</code></pre>
+
+        <h2>Arrays</h2>
+        <p>The array is a collection of data items of the same type. In simple terms, it is a variable that contains
+            multiple values.</p>
+        <h3 class="marku">variable</h3>
+        <p>Containers for storing data.</p>
+        <pre class="language-javascript"><code>var fruit = ["element1", "element2", "element3"];</code></pre>
+        <h3 class="marku">concat method</h3>
+        <p>Joins two or more arrays together.</p>
+        <pre class="language-javascript"><code>concat()</code></pre>
+        <h3 class="marku">indexOf method</h3>
+        <p>Returns the index of the specified item from the array.</p>
+        <pre class="language-javascript"><code>indexOf()</code></pre>
+        <h3 class="marku">join method</h3>
+        <p>Converts the array elements to a string.</p>
+        <pre class="language-javascript"><code>join()</code></pre>
+        <h3 class="marku">pop method</h3>
+        <p>Deletes the last element of the array.</p>
+        <pre class="language-javascript"><code>pop()</code></pre>
+        <h3 class="marku">reverse method</h3>
+        <p>This method reverses the order of the array elements.</p>
+        <pre class="language-javascript"><code>reverse()</code></pre>
+        <h3 class="marku">sort method</h3>
+        <p>Sorts the array elements in a specified manner.</p>
+        <pre class="language-javascript"><code>sort()</code></pre>
+        <h3 class="marku">toString method</h3>
+        <p>Converts the array elements to a string.</p>
+        <pre class="language-javascript"><code>toString()</code></pre>
+        <h3 class="marku">valueOf method</h3>
+        <p>returns the relevant Number Object holding the value of the argument passed</p>
+        <pre class="language-javascript"><code>valueOf()</code></pre>
+        <h2>Number Methods</h2>
+        <p>JS math and number objects provide several constant and methods to perform mathematical operations.</p>
+        <h3 class="marku">toExponential method</h3>
+        <p>Converts a number to its exponential form.</p>
+        <pre class="language-javascript"><code>toExponential()</code></pre>
+        <h3 class="marku">toPrecision method</h3>
+        <p>Formats a number into a specified length.</p>
+        <pre class="language-javascript"><code>toPrecision()</code></pre>
+        <h3 class="marku">toString method</h3>
+        <p>Converts an object to a string</p>
+        <pre class="language-javascript"><code>toString()</code></pre>
+        <h3 class="marku">valueOf method</h3>
+        <p>Returns the primitive value of a number.</p>
+        <pre class="language-javascript"><code>valueOf()</code></pre>
+        <h2>Maths Methods</h2>
+        <h3 class="marku">ceil method</h3>
+        <p>Rounds a number upwards to the nearest integer, and returns the result</p>
+        <pre class="language-javascript"><code>ceil(x)</code></pre>
+        <h3 class="marku">exp method</h3>
+        <p>Returns the value of E^x.</p>
+        <pre class="language-javascript"><code>exp(x)</code></pre>
+        <h3 class="marku">log method</h3>
+        <p>Returns the logarithmic value of x.</p>
+        <pre class="language-javascript"><code>log(x)</code></pre>
+        <h3 class="marku">pow method</h3>
+        <p>Returns the value of x to the power y.</p>
+        <pre class="language-javascript"><code>pow(x,y)</code></pre>
+        <h3 class="marku">random method</h3>
+        <p>Returns a random number between 0 and 1.</p>
+        <pre class="language-javascript"><code>random()</code></pre>
+        <h3 class="marku">sqrt method</h3>
+        <p>Returns the square root of a number x</p>
+        <pre class="language-javascript"><code>sqrt(x)</code></pre>
+
+        <h2>Dates</h2>
+        <p>Date object is used to get the year, month and day. It has methods to get and set day, month, year, hour,
+            minute, and seconds.</p>
+        <h3 class="marku">Pulling Date from the Date object</h3>
+        <p>Returns the date from the date object</p>
+        <pre class="language-javascript"><code>getDate()</code></pre>
+        <h3 class="marku">Pulling Day from the Date object</h3>
+        <p>Returns the day from the date object</p>
+        <pre class="language-javascript"><code>getDay()</code></pre>
+        <h3 class="marku">Pulling Hours from the Date object</h3>
+        <p>Returns the hours from the date object</p>
+        <pre class="language-javascript"><code>getHours()</code></pre>
+        <h3 class="marku">Pulling Minutes from the Date object</h3>
+        <p>Returns the minutes from the date object</p>
+        <pre class="language-javascript"><code>getMinutes()</code></pre>
+        <h3 class="marku">Pulling Seconds from the Date object</h3>
+        <p>Returns the seconds from the date object</p>
+        <pre class="language-javascript"><code>getSeconds()</code></pre>
+        <h3 class="marku">Pulling Time from the Date object</h3>
+        <p>Returns the time from the date object</p>
+        <pre class="language-javascript"><code>getTime()</code></pre>
+        <h2>Mouse Events</h2>
+        <p>Any change in the state of an object is referred to as an Event. With the help of JS, you can handle events,
+            i.e., how any specific HTML tag will work when the user does something.</p>
+        <h3 class="marku">click</h3>
+        <p>Fired when an element is clicked</p>
+        <pre class="language-javascript"><code>element.addEventListener('click', ()=&gt;{
+        // Code to be executed when the event is fired
+        });</code></pre>
+        <h3 class="marku">oncontextmenu</h3>
+        <p>Fired when an element is right-clicked</p>
+        <pre class="language-javascript"><code>element.addEventListener('contextmenu', ()=&gt;{
+        // Code to be executed when the event is fired
+        });</code></pre>
+        <h3 class="marku">dblclick</h3>
+        <p>Fired when an element is double-clicked</p>
+        <pre class="language-javascript"><code>element.addEventListener('dblclick', ()=&gt;{
+        // Code to be executed when the event is fired
+        });</code></pre>
+        <h3 class="marku">mouseenter</h3>
+        <p>Fired when an element is entered by the mouse arrow</p>
+        <pre class="language-javascript"><code>element.addEventListener('mouseenter', ()=&gt;{
+        // Code to be executed when the event is fired
+        });</code></pre>
+        <h3 class="marku">mouseleave</h3>
+        <p>Fired when an element is exited by the mouse arrow</p>
+        <pre class="language-javascript"><code>element.addEventListener('mouseleave', ()=&gt;{
+        // Code to be executed when the event is fired
+        });</code></pre>
+        <h3 class="marku">mousemove</h3>
+        <p>Fired when the mouse is moved inside the element</p>
+        <pre class="language-javascript"><code>element.addEventListener('mousemove', ()=&gt;{
+        // Code to be executed when the event is fired
+        });</code></pre>
+        <h2>Keyboard Events</h2>
+        <h3 class="marku">keydown</h3>
+        <p>Fired when the user is pressing a key on the keyboard</p>
+        <pre class="language-javascript"><code>element.addEventListener('keydown', ()=&gt;{
+        // Code to be executed when the event is fired
+        });</code></pre>
+        <h2>&nbsp;</h2>
+        <h3 class="marku">keypress</h3>
+        <p>Fired when the user presses the key on the keyboard</p>
+        <pre class="language-javascript"><code>element.addEventListener('keypress', ()=&gt;{
+        // Code to be executed when the event is fired
+        });</code></pre>
+        <h3 class="marku">keyup</h3>
+        <p>Fired when the user releases a key on the keyboard</p>
+        <pre class="language-javascript"><code>element.addEventListener('keyup', ()=&gt;{
+        // Code to be executed when the event is fired
+        });</code></pre>
+        <h2>Errors</h2>
+        <p>Errors are thrown by the compiler or interpreter whenever they find any fault in the code, and it can be of
+            any type like syntax error, run-time error, logical error, etc. JS provides some functions to handle the
+            errors.</p>
+        <h3 class="marku">try and catch</h3>
+        <p>Try the code block and execute catch when err is thrown</p>
+        <pre class="language-javascript"><code>try {
+        Block of code to try
+        }
+        catch(err) {
+        Block of code to handle errors
+        }</code></pre>
+
+        
+<h5 class="heading1" style="color: white; background-color: red">DOM Window</h5>
+<p>The window object represents an open window in a browser.</p>
+<pre class="line-numbers"><code class="language-markup match-braces">
+window.open(); &amp; window.closed(); &amp; name;
+frameElement &amp; frames
+window.history
+window.location
+window.navigator 
+window.innerWidth    &amp;   window.outerWidth
+window.innterHeight  &amp;   window.outerHeight
+window.pageXOffset   &amp;   window.pageYOffset
+window.scrollX       &amp;   window.scrollY 
+window.scrollTo      &amp;   window.scrollBy 
+screenX              &amp;   window.screenY
+window.screenTop     &amp;   window.screenLeft 
+parent 
+screen 
+self 
+status 
+top 
+</code></pre>
+<div class="heading2" style="color: white; background-color: blue">
+    <h3>window.open( ) &amp; window.close( );</h3>
+</div>
+<p><code class="markcode">window.open()</code> is used to open the new window, and you can set the 
+name of the window after link parameter you can pass the name as a String.</p><br>
+    <span class="outputh">Syntax:</span>   
+    <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+        window.open(?url,?target,?feature);
+        window.open("https://technicalhassanali.blogspot.com/p/short-codes.html","name",target="_blank","width=500px,Height=400px");
+    </code></pre>
+    <p><code class="markcode">window.close()</code> is used to close the open window.</p>
+    <span class="outputh">Syntax:</span>
+    <pre class="output">window.close( );</pre>
+    <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;script&gt;
+        let myWindow;
+        
+        function openWin(){
+        myWindow = window.open("","","width=400, height=200");
+        }
+        
+        function closeWin(){
+        if(myWindow){
+        myWindow.close();
+        }
+        }
+        &lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        
+        &lt;button onclick="openWin()"&gt;Open "myWindow"&lt;/button&gt;
+        &lt;button onclick="closeWin()"&gt;Close "myWindow"&lt;/button&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;button onclick="checkWin()"&gt;Has "myWindow" been closed?&lt;/button&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;div id="msg"&gt;&lt;/div&gt;
+        
+        &lt;/body&gt;
+        &lt;/html&gt;    
+    </code></pre>
+
+<!----------------------------Window.Body---------------------------------------------->  
+    <h3 class="marku">window.body</h3>
+       <p>is used to get the body of the document.</p>   
+    <span class="outputh">Syntax:</span>
+    <pre class="language-javascript"><code>window.body.backgroundColor="green";</code></pre>
+
+
+<!----------------------------window.frameElement-------------------------------------------->   
+    <h3 class="marku">window.frameElement</h3>
+    <p>The frameElement property is used when the user click on the button then iframe element show it.</p>   
+ <span class="outputh">Syntax:</span>
+ <pre class="language-javascript"><code>&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;body&gt;   
+    &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;
+    &lt;script&gt;
+    function myFunction() {
+      var frame = window.frameElement;
+      
+      if (frame) { 
+        frame.src = "https://www.w3schools.com/";
+      }
+    }    
+    &lt;/script&gt;   
+    &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+
+<!----------------------------window.frames---------------------------------------------->  
+<h3 class="marku">window.frames</h3>
+<p>The frames property is used to change the iframe link given the location of iframe element.
+It work with index No start with 0. </p>
+<p><code class="markcode">window.frames</code> return you the array
+like object and you can pass the index no to acess to specific value.</p>   
+<span class="outputh">Syntax:</span>
+<pre class="output">window.frames[0].location;</pre>
+<pre class="language-javascript"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;   
+&lt;button onclick=&quot;myFunction()&quot;&gt;Try it&lt;/button&gt;
+&lt;br&gt;&lt;br&gt;    
+&lt;iframe src=&quot;https://technicalhassanali.blogspot.com/&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://technicalhassanali.blogspot.com/&quot;&gt;&lt;/iframe&gt;
+&lt;script&gt;
+function myFunction() {
+window.frames[0].location = &quot;https://www.w3schools.com&quot;;
+}
+&lt;/script&gt;   
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<!----------------------------window.history;---------------------------------------------->  
+<div class="heading2" style="color: white; background-color: blue;font-family: consolas;">
+    <h3> window.history;</h3>
+</div>
+<p>is used in to find the history and go forward and backword to the page.</p> 
+<span class="outputh">Syntax:</span>
+<pre class="output">
+    history.back()    - same as clicking back in the browser
+    history.forward() - same as clicking forward in the browser
+</pre>
+<p>In blow example you can see that we take two function one function work with history back and 
+    other function work with history forward to page.
+</p>
+<pre class="language-javascript"><code>
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;script&gt;
+    function goBack() {
+      window.history.back()
+    }
+    function goForward() {
+      window.history.forward()
+    }
+    &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;input type=&quot;button&quot; value=&quot;Back&quot; onclick=&quot;goBack()&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;Forward&quot; onclick=&quot;goForward()&quot;&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+
+<!--------------------------------window.navigator;------------------------------------------->  
+<div class="heading2" style="color: white; background-color: blue;font-family: consolas;">
+    <h3> window.navigator;</h3>
+</div>
+<p>The navigator object contains information about the browser.</p> 
+<span class="outputh">Detect Browser in JavaScript </span>
+<pre><code class="language-javascript"  data-prismjs-copy="Copy">
+  let userAgent = navigator.userAgent;
+let browser;
+if(userAgent.match(/edg/i)){
+browser = &quot;edge&quot;;
+}else if(userAgent.match(/firefox|fxios/i)){
+browser = &quot;firefox&quot;;
+}else if(userAgent.match(/opr/i)){
+browser = &quot;opera&quot;;
+}else if(userAgent.match(/chrome|chromium|crios/i)){
+browser = &quot;chrome&quot;;
+}else if(userAgent.match(/safari/i)){
+browser = &quot;safari&quot;;
+}else{
+alert(&quot;Other browser&quot;);
+}
+console.log(browser);
+</code></pre>
+ 
+<!----------------------------window.innerWidth and window.outerWidth ------------------------------------------->  
+
+<div class="heading2" style="color: white; background-color: blue;font-family: consolas;">
+    <h3>window.innerWidth   &amp; window.outerWidth </h3>
+</div>
+<p><code class="markcode">window.innerWidth</code> The read-only Window property innerWidth returns 
+    the interior width of the window in pixels. This includes the width of the vertical scroll bar, 
+    if one is present.<br/> 
+</p> 
+<span class="outputh"></span>
+<pre><code class="language-javascript"  data-prismjs-copy="Copy">
+// This will return the width of the viewport
+let x = window.innerWidth;
+// This will return the width of the frame viewport within a frameset
+var intFrameWidth = self.innerWidth;
+
+// This will return the width of the viewport of the closest frameset
+var intFramesetWidth = parent.innerWidth;
+
+// This will return the width of the viewport of the outermost frameset
+var intOuterFramesetWidth = top.innerWidth;
+</code></pre>
+<p><code class="markcode">window.outerWidth</code> Window.outerWidth read-only property returns 
+    the width of the outside of the browser window. It represents the width of the whole browser 
+    window including sidebar (if expanded), window chrome and window resizing borders/handles.<br>
+    To change the size of a window, see <code class="markcode">window.resizeBy()</code> and <code class="markcode">window.resizeTo()</code>.</p>
+<pre><code class="language-javascript"  data-prismjs-copy="Copy">
+    let x = window.outerWidth;
+    console.log(x);
+    </code></pre>
+
+<div class="heading2" style="color: white; background-color: blue;font-family: consolas;">
+    <h3>window.innterHeight  &   window.outerHeight </h3>
+</div>
+<p><code class="markcode">window.innterHeight</code> The read-only innerHeight property 
+    of the Window interface returns the interior height of the window in pixels, including 
+    the height of the horizontal scroll bar, if present.</p>
+<pre><code class="language-javascript"  data-prismjs-copy="Copy">
+let x = window.innterHeight;
+console.log(x);
+</code></pre>
+<p><code class="markcode">window.outerHeight</code>The Window.outerHeight read-only 
+    property returns the height in pixels of the whole browser window, 
+    including any sidebar, window chrome, and window-resizing borders/handles.</p>
+<pre><code class="language-javascript"  data-prismjs-copy="Copy">
+    let x = window.outerHeight;
+    console.log(x);
+    </code></pre>
+
+<!-------------------------------window.pageXOffset   &   window.pageYOffset-------- ------------>
+
+<div class="heading2" style="color: white; background-color: blue;font-family: consolas;">
+    <h3>window.pageXOffset   &   window.pageYOffset </h3>
+</div>
+<p>The <code class="markcode">pageXOffset</code> and <code class="markcode">pageYOffset</code> properties returns the pixels the current document has been 
+    scrolled from the upper left corner of the window, horizontally and vertically.<br>
+The pageXOffset and pageYOffset properties are equal to the scrollX and scrollY properties.<br>
+These properties are read-only.</p>
+
+<!--------------------------------window.scrollX    &amp;   window.scrollY ------------>
+<div class="heading2" style="color: white; background-color: blue;font-family: consolas;">
+    <h3> window.scrollX    &amp;   window.scrollY </h3>
+</div>
+<p><code class="markcode">window.scrollX </code>The read-only scrollX property of the Window interface returns the number of pixels that 
+    the document is currently scrolled horizontally. This value is subpixel precise in modern 
+    browsers, meaning that it isn't necessarily a whole number. 
+    You can get the number of pixels the document is scrolled vertically from the scrollY property.
+</p> 
+<pre><code class="language-javascript"  data-prismjs-copy="Copy">
+    var x = window.scrollX;
+</code></pre>
+<p><code class="markcode">window.scrollY</code></p> 
+<pre><code class="language-javascript"  data-prismjs-copy="Copy">
+    var y = window.scrollY
+    </code></pre>
+<!--------------------------------window.scrollTo      and   window.scrollBy ------------>
+<div class="heading2" style="color: white; background-color: blue;font-family: consolas;">
+    <h3>window.scrollTo      &amp;   window.scrollBy </h3>
+</div> 
+<p>x-coord is the pixel along the horizontal axis of the document that you want displayed in the upper left.<br>
+y-coord is the pixel along the vertical axis of the document that you want displayed in the upper left.
+</p>
+
+<p><code class="markcode">window.scrolltTo</code> is used to scroll the </p>
+<span class="outputh"></span>
+<pre><code class="language-javascript"  data-prismjs-copy="Copy">
+    window.scrollTo(x-coord, y-coord)
+    window.scrollTo(options)    
+</code></pre>
+<pre class="output">
+    window.scrollTo({
+        top: 100,
+        left: 100,
+        behavior: 'smooth'
+      });
+</pre>
+
+
+<p><code class="markcode">window.scrolltBy</code> method scrolls the document in the window by the given amount.</p>
+<p>x-coord is the horizontal pixel value that you want to scroll by.<br>
+    y-coord is the vertical pixel value that you want to scroll by.</p>
+<pre><code class="language-javascript"  data-prismjs-copy="Copy">
+    window.scrollBy(x-coord, y-coord);
+    window.scrollBy(options)       
+</code></pre>
+<pre class="output">
+    window.scrollBy({
+        top: 100,
+        left: 100,
+        behavior: 'smooth'
+      });
+</pre>
+
+<!--<h5 class="heading1" style="color: white; background-color: red"></h5>
+
+ <div class="heading2" style="color: white; background-color: blue">
+            <h3> element.attribute = new value</h3>
+        </div>
+
+<p ></p>
+<span class="marku"></span>
+<code class="markcode"></code>
+<pre><code class="language-javascript match-braces" data-prismjs-copy="Copy"></code></pre>
+<h5 class="outputh">Output :</h5>
+<pre class="output">  30</pre>
+
+
+ <ul>
+    <li></li>
+  </ul>
+     -->
+
+
+ 
+
+        <h2>Window Methods</h2>
+        <p>Methods that are available from the window object</p>
+        <h3 class="marku">alert method</h3>
+        <p>Used to alert something on the screen</p>
+        <pre class="language-javascript"><code>alert()</code></pre>
+        <h3 class="marku">blur method</h3>
+        <p>The blur() method removes focus from the current window.</p>
+        <pre class="language-javascript"><code>blur()</code></pre>
+        <h3 class="marku">setInterval</h3>
+        <p>Keeps executing code at a certain interval</p>
+        <pre class="language-javascript"><code>setInterval(() =&gt; {
+        // Code to be executed
+        }, 1000);</code></pre>
+        <h3 class="marku">setTimeout</h3>
+        <p>Executes the code after a certain interval of time</p>
+        <pre class="language-javascript"><code>setTimeout(() =&gt; {
+        // Code to be executed
+        }, 1000);</code></pre>
+        <h3 class="marku">close</h3>
+        <p>The Window. close() method closes the current window</p>
+        <pre class="language-javascript"><code>window.close()</code></pre>
+        <h3 class="marku">confirm</h3>
+        <p>The window.confirm() instructs the browser to display a dialog with an optional message, and to wait until
+            the user either confirms or cancels</p>
+        <pre class="language-javascript"><code>window.confirm('Are you sure?')</code></pre>
+        <h3 class="marku">open</h3>
+        <p>Opens a new window</p>
+        <pre class="language-javascript"><code>window.open("https://www.technicalhassanali.blogspot.com");</code></pre>
+        <h3 class="marku">scrollBy</h3>
+        <pre class="language-javascript"><code>window.scrollBy(100, 0); // Scroll 100px to the right</code></pre>
+        <h3 class="marku">scrollTo</h3>
+        <p>Scrolls the document to the specified coordinates.</p>
+        <pre
+            class="language-javascript"><code>window.scrollTo(500, 0); // Scroll to horizontal position 500</code></pre>
+        <h3 class="marku">clearInterval</h3>
+        <p>Clears the setInterval. var is the value returned by setInterval call</p>
+        <pre class="language-javascript"><code>clearInterval(var)</code></pre>
+        <h3 class="marku">clearTimeout</h3>
+        <p>Clears the setTimeout. var is the value returned by setTimeout call</p>
+        <pre class="language-javascript"><code>clearTimeout(var)</code></pre>
+        <h3 class="marku">stop</h3>
+        <p>Stops the further resource loading</p>
+        <pre class="language-javascript"><code>stop()</code></pre>
+        <h2>Query/Get Elements</h2>
+        <p>The browser creates a DOM (Document Object Model) whenever a web page is loaded, and with the help of HTML
+            DOM, one can access and modify all the elements of the HTML document.</p>
+        <h3 class="marku">querySelector</h3>
+        <p>Selector to select first matching element</p>
+        <pre class="language-javascript"><code>document.querySelector('css-selectors')</code></pre>
+        <h3 class="marku">querySelectorAll</h3>
+        <p>A selector to select all matching elements</p>
+        <pre class="language-javascript"><code>document.querySelectorAll('css-selectors', ...)</code></pre>
+        <h3 class="marku">getElementsByTagName</h3>
+        <p>Select elements by tag name</p>
+        <pre class="language-javascript"><code>document.getElementsByTagName('element-name')</code></pre>
+        <h3 class="marku">getElementsByClassName</h3>
+        <p>Select elements by class name</p>
+        <pre class="language-javascript"><code>document.getElementsByClassName('class-name')</code></pre>
+        <h3 class="marku">Get Element by Id</h3>
+        <p>Select an element by its id</p>
+        <pre class="language-javascript"><code>document.getElementById('id')</code></pre>
+        <h2>Creating Elements</h2>
+        <p>Create new elements in the DOM</p>
+        <h3 class="marku">createElement</h3>
+        <p>Create a new element</p>
+        <pre class="language-javascript"><code>document.createElement('div')</code></pre>
+        <h3 class="marku">createTextNode</h3>
+        <p>Create a new text node</p>
+        <pre class="language-javascript"><code>document.createTextNode('some text here')</code></pre>
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>JavaScript</h3>
+        </div>
+        <p>JavaScript is used in three way</p>
+        <ol>
+            <li><mark>Use in head Tag</mark></li>
+            <li><mark>Use in Body Tag</mark> the <mark>script</mark>Tag.</li>
+            <li><mark>Use External File name .js File</mark> </li><br />
+        </ol>
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">
+    document.write("Hello World!"); //Show Output in the Browser
+    document.alert("Hello World!"); //Show Alert Message When Refresh Browser
+    alert("Show Alert SMS");       //Show Alert Message When Refresh Browser
+     </code></pre>
+
+        <span class="marku">Print Page Code:</span>
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">&lt;button onclick="window.print()"&gt;Click to Print Message&lt;/button&gt;</code></pre>
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Data Types in JavaScript</h3>
+        </div>
+
+        <p>Three types of JavaScript is used.</p>
+        <ol>
+            <li><code class="markcode">var</code>:<br /> is used when a variable a declare then you can decalare same
+                name in the javascript is used <mark>var</mark>.Most of the Programming Langauge not allow to declare
+                those variable that have already declare at same name.<br />
+
+                <pre><code class="language-javascript" data-prismjs-copy="Copy">
+var h = "hassan";
+var h= "ali";
+document.write(h);
+      </code></pre>
+            </li>
+
+            <li><code class="markcode">let :</code><br /> is used when a variable declare at once they not declare at
+                same name they show error.But in the <mark>var</mark> you can declare variable at same name many
+                time.<br />
+                <pre><code class="language-javascript" data-prismjs-copy="Copy">
+let h = "hassan";
+let h= "ali"; //show error because it has already declare
+document.write(h);
+      </code></pre>
+            </li>
+
+            <li><code class="markcode">const :</code> <br /> is used when the variable is declare with
+                <mark>const</mark> data_type then they are not declare at second time. and you can not assign the value
+                of variables(simple not value override), the reason is that variable is <mark>const</mark> and constant
+                variable when declare there value not change when the value are assign.<br />
+
+                <pre><code class="language-javascript" data-prismjs-copy="Copy">
+const h = "hassan";
+h= "ali";
+//Does not override value b/c it already assign a constant value.
+document.write(h);
+      </code></pre>
+            </li>
+        </ol>
+
+        <!--Image Start-->
+        <img src="../images/datatype.png" alt="datatypeimage" width="100%" height="500px">
+        <!--Image End-->
+
+        <br />
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>JavaScript in Google Console</h3>
+        </div>
+        <br />
+        <h4 class="marku">Shortcut Key: </h4>
+        <p><code class="markcode">control+shift+i</code> and Rightl click on the Page and click on
+            <mark>inspect</mark>. You can See all in the <mark>Console</mark> Section.
+        </p>
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">
+console.log([1,2,3,4,5]);         //show in console section index of array
+console.table([1,2,3,4,5]);       //show the array index in table
+console.error([1,2,3,4,5]);       //show the error in the array
+console.warn([1,2,3,4,5]);        //show the warning in Console
+console.time([1,2,3,4,5]);       //show How much time to start run.
+//Place the Code b/w console.time(); and console.timeEnd(); between the Code
+console.timeEnd([1,2,3,4,5]);    //show How much time to start to End Run Query b/w.
+</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Alert Box in JavaScript</h3>
+        </div>
+        <p><code class="markcode">alert(); </code> is used to show the Alert Message on the Top.</p>
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">
+      alert("This is Alert Box"); //Second Example
+      var a = 10, b = 20;
+      if(a&lt;b){
+          document.write("A is Greater then B");
+      }else{
+          alert("A is Less then B");
+      }</code></pre>
+
+
+        <br />
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Confirm Box in JavaScript</h3>
+        </div>
+        <p><code class="markcode">confirm();</code> The main use of confirm(); and alert(); is the
+            confirm(); is used two option show cancel and ok. But in the alert(); message show the only message and Ok
+            button.</p>
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">
+      /*Example 01 Start */
+        var a = confirm("Do You Like Our Website");
+        alert(a);
+      /*Example 01 End */
+                              /*Example 02 Start */
+      confirm("Message");
+      /*Example 02 End */
+                              /*Example 03 Start */
+      var a =confirm("Do You like our Website");
+      if(a){
+              alert("Thanks");
+      }else{
+              alert("Sorry");
+      }
+      /*Example 03 End */</code></pre>
+
+        <br />
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Prompt Box in JavaScript</h3>
+        </div>
+        <p><mark class="markcode">prompt("message");</mark> is used a prompt is show on the top and
+            the user give there feedback through input.</p>
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">
+/*Example 01 Start */
+prompt("what is Your Name?");   // show the input Message
+/*Example 01 End */
+
+/*Example 02 prompt value are assign to var a then var a display the value in alert
+box. you can use the value of prompt in different purpose.*/
+var a = prompt("What is your Name?");
+alert("Your Name is "+a);
+document.write(a);
+/*Example 02 End */</code></pre>
+
+        <br />
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Console in JavaScript</h3>
+        </div><br />
+        <span class="marku">Shortcut Key: </span>
+        <p><mark class="  markcode">control+shift+i</mark> and Rightl click on the Page and click on
+            <mark>inspect</mark>. You can See all in the <mark>Console</mark> Section.
+        </p>
+
+        <br />
+        <!--Image Start-->
+        <img src="../images/events.png" alt="events javascript" width="100%" height="550px">
+        <!--Image End-->
+
+
+
+        <br />
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Local Variable and Global Variables</h3>
+        </div>
+        <p>
+            <mark class="marku">Global Variables:</mark> Global Variable are defiend anywhere in
+            the javascript code.It can be used anywhere in the code.<br />
+            <mark class="marku">Local Variables :</mark> Local Variable are those variables whoes
+            only defined in function and access in Function.
+        </p>
+        <ul>
+            <li>JavaScript variable names are case-sensitive. <br />
+                <mark>For Example</mark>, Name and name are two different
+                variables.
+            </li>
+            <li>JavaScript variable names should not start with a <mark>numeral (0-9)</mark>. They must begin with a
+                letter or an underscore character. For example, 123test is an invalid variable name but _123test is a
+                valid one.</li>
+        </ul>
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">
+        var a = "Global";
+          function hassan(){
+            document.write(a);
+          }
+          function ali(){
+              var b = "Local";
+              document.write(b);
+          }
+     </code></pre>
+
+
+        <p>You should not use any of the JavaScript reserved keywords as a variable name. These
+            keywords are mentioned in blow section. For example, break or boolean variable names are not valid</p>
+        <table class="table-design">
+            <tbody>
+                <tr>
+                    <td>abstract</td>
+                    <td>else</td>
+                    <td>instance of</td>
+                    <td>switch</td>
+                </tr>
+                <tr>
+                    <td>boolean</td>
+                    <td>enum</td>
+                    <td>int</td>
+                    <td>synchronized</td>
+                </tr>
+                <tr>
+                    <td>break</td>
+                    <td>export</td>
+                    <td>interface</td>
+                    <td>this</td>
+                </tr>
+                <tr>
+                    <td>byte</td>
+                    <td>extends</td>
+                    <td>long</td>
+                    <td>throw</td>
+                </tr>
+                <tr>
+                    <td>catch</td>
+                    <td>final</td>
+                    <td>new</td>
+                    <td>transient</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>finally</td>
+                    <td>null</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>class</td>
+                    <td>float</td>
+                    <td>package</td>
+                    <td>try</td>
+                </tr>
+                <tr>
+                    <td>const</td>
+                    <td>for</td>
+                    <td>private</td>
+                    <td>typeof</td>
+                </tr>
+                <tr>
+                    <td>continue</td>
+                    <td>function</td>
+                    <td>protected</td>
+                    <td>var</td>
+                </tr>
+                <tr>
+                    <td>debugger</td>
+                    <td>goto</td>
+                    <td>public</td>
+                    <td>void</td>
+                </tr>
+                <tr>
+                    <td>default</td>
+                    <td>if</td>
+                    <td>return</td>
+                    <td>volatile</td>
+                </tr>
+                <tr>
+                    <td>delete</td>
+                    <td>implements</td>
+                    <td>short</td>
+                    <td>while</td>
+                </tr>
+                <tr>
+                    <td>do</td>
+                    <td>import</td>
+                    <td>static</td>
+                    <td>with</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>in</td>
+                    <td>super</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1 class="heading1" style="background-color: red;">String Operations</h1>
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>List of All String Operation in JavaScript</h3>
+        </div>
+        <pre class="line-numbers"><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+     string.slice(start_no,end_no);
+     string.substring(start_no,end_no);
+     string.substr(start_no,end_no);
+     //String Search
+     string.indexOf();
+     String.lastIndexOf();
+     String.startsWith();
+     String.endsWith();
+     toString();
+     JSON.stringify(object_variable_Parameter);
+     </code></pre>
+        <!--String Operation -->
+        <br />
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>string.slice(start_no,end_no);</h3>
+        </div>
+
+        <ul>
+            <li><code class="markcode">slice(start,end)</code> is used to show the specific part of the string.In this
+                Start
+                index with 0 of string, and String display with start number and end number not print of index value.
+            </li>
+            <li><code class="markcode">substring(start_no,end_no);</code> string.substring(start,end) is used to show
+                the specific part of the string.In this Start
+                index with 0 of string, and String display with start number and end number not print of index value.
+            </li>
+            <li class="  markcode"><code class="markcode">string.substr(start_no,end_no);</code>string.substr(start,end)
+                is
+                used to show the specific part of the string.In this Start
+                index with 0 of string, and String display with start number and end number not print of index value.
+            </li>
+        </ul>
+        <pre class="line-numbers"><code class="language-javascript" data-prismjs-copy="Copy">
+let a = &quot;HassanAli&quot;;           // index start from 0
+console.log(a.slice(0,6)); 			   //Return Hassan
+console.log(a.substring(0,6));		   //Return Hassan
+console.log(a.substr(0,6));			   //Return Hassan
+     </code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>String Search</h3>
+        </div>
+        <br />
+        <div class="alert-message alert-success short-b">Both <mark class="markcode">indexOf()</mark>, and <mark
+                class="markcode">lastIndexOf()</mark> return -1 if the text is not found.<br />Both methods accept a
+            second
+            parameter as the starting position for the search.</div>
+        <br />
+        <ol>
+
+
+            <!------------------------------------------------String.indexOf();----------------------------------------------------------------------------->
+            <div class="heading2" style="color: white; background-color: blue">
+                <h3 class="marku">String.indexOf();</h3>
+            </div>
+            <p>The indexOf() method returns the index of (the position of) the first occurrence of a
+                specified text in a string.</p>
+            <pre><code class="language-javascript" data-prismjs-copy="Copy">
+            let String = &quot;Hassan Ali khan Ali&quot;;  //Return First Occurance index of Search String
+            console.log(String.indexOf(&quot;Ali&quot;));
+</code></pre>
+
+            <!-------------------------------------------------------String.lastIndexOf();----------------------------------------------------------------->
+            <div class="heading2" style="color: white; background-color: blue">
+                <h3 class="marku">String.lastIndexOf();</h3>
+            </div>
+            <p>The lastIndexOf() method returns the index of the last occurrence of a specified text in
+                a string.</p>
+            <pre><code class="language-javascript" data-prismjs-copy="Copy">
+        let String = "Hassan Ali khan Ali";
+        console.log(String.lastIndexOf("Ali"));
+</code></pre>
+            <h5 class="outputh">Output :</h5>
+            <pre class="output"> Return 16 because Last Index are preference</pre>
+            <br />
+
+            <!--------------------------------------------------String.startsWith();---------------------------------------------------------------------->
+            <div class="heading2" style="color: white; background-color: blue">
+                <h3 class="marku">String.startsWith();</h3>
+            </div>
+            <p>The startsWith() method returns true if a string begins with a specified value, otherwise
+                false.</p>
+            <pre><code class="language-javascript" data-prismjs-copy="Copy">
+//Syntax        :   string.startsWith(searchvalue, start);
+//searchvalue   :   Required. The value to search for.
+//start         :   Optional. Default 0. The position to start the search.
+let String = &quot;Hassan Ali khan&quot;;
+console.log(String.startsWith(&quot;Hassan&quot;));
+console.log(String.startsWith(&quot;Ali&quot;));
+</code></pre>
+            <h5 class="outputh">Output :</h5>
+            <pre class="output">True //true value find in start
+False  //Return false b/c not value in start</pre>
+
+            <!--------------------------------------------------String.endsWith();---------------------------------------------------------------------->
+            <div class="heading2" style="color: white; background-color: blue">
+                <h3 class="marku">String.endsWith();</h3>
+            </div>
+            <p>The endsWith() method returns true if a string ends with a specified value, otherwise
+                false.
+            </p>
+            <pre><code class="language-javascript" data-prismjs-copy="Copy">
+//Syntax:           string.endswith(searchvalue, length);
+//searchvalue:      Required. The value to search for.
+//length:           Optional. The length to search.
+let String = &quot;Hassan Ali khan&quot;;
+console.log(String.endsWith(&quot;khan&quot;)); //true value find in End
+console.log(String.endsWith(&quot;Ali&quot;));  // return false b/c not value in end
+</code></pre>
+
+            <!--------------------------------------------------String.search();---------------------------------------------------------------------->
+            <div class="heading2" style="color: white; background-color: blue">
+                <h3 class="marku">String.search();</h3>
+            </div>
+            <p>The search() method searches a string for a specified value and returns the position of
+                the
+                match.</p>
+            <pre><code class="language-javascript" data-prismjs-copy="Copy">
+      let str = "Please locate where 'locate' occurs!";
+      document.getElementById("demo").innerHTML = str.search("locate")
+</code></pre>
+        </ol>
+
+        <!--------------------------------------------------String Operation---------------------------------------------------------------------->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>toString()</h3>
+        </div>
+        <p>The toString() method returns a number as a string.</p>
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">
+            let a = [1,2,3,4,5];
+			console.log(a.toString()); //return number as a String
+</code></pre>
+
+        <!--------------------------------------------------Arrays in javaScript;---------------------------------------------------------------------->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Keyword variable_name = [data_set];</h3>
+        </div>
+        <p>JavaScript arrays are used to store multiple values in a single variable.You can use the
+            Keyword like let,var,const in creating a array. But Remember when you create the array you choose the best
+            keyword.</p>
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">
+            let a = [1,2,3,4,5]; //Create a Array
+            console.log(a.length);  //return the length of array is 6
+            console.log(a[0]);      //return the number on index 0
+</code></pre>
+
+        <!------------------------------------------JSON.stringify(object_variable_Parameter);------------------------------------------------->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>JSON.stringify(object_variable_Parameter);</h3>
+        </div>
+
+        <p><code class="markcode">JSON.stringify(parameter);</code> is used to conver the object into
+            the
+            String Collection.</p>
+        <span class="marku">Example use Object:</span>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+    const info={
+    Name : "Hassan Ali",
+    Father_Name : "Riaz-ul-Hassan",
+    Course: "IT"
+}
+
+console.log(JSON.stringify(info));
+    </code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">{"Name":"Hassan Ali","Father_Name":"Riaz-ul-Hassan","Course":"IT"}</pre>
+
+        <br />
+        <span class="marku">Example use Array:</span>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const arr = ["John", "Peter", "Sally", "Jane"];
+const myJSON = JSON.stringify(arr);
+console.log(myJSON);
+console.log(typeof(myJSON)); //check type return object
+    </code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">["John","Peter","Sally","Jane"]
+String </pre>
+
+
+        <h1 class="heading1" style="background-color: red;">DOM Document</h1>
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>List of All DOM Documents</h3>
+        </div>
+        <p><code class="markcode">getElementById</code> is used to get the Element by using <code
+                class="markcode">id="name"</code> and change the inner content of the HTML document through id. <span
+                class="ccode">document.getElementById("id_name").innerHTML</span>property is useful for getting or
+            replacing the content of HTML elements.</p>
+
+        <pre class="line-numbers"><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+document.getElementById(&quot;id_name&quot;).innerHTML = &quot;Change Text&quot;;
+document.getElementByTagName(&quot;name&quot;);    //Find elements by tag name
+document.getElementsByClassName(&quot;name&quot;) //Find elements by class name
+document.getElementsByName(&quot;fname&quot;)  //using name in html input section get value
+document;
+document.all;
+document.title;
+document.head;
+document.body;
+document.links;
+document.images;
+document.documentURI;
+document.domain;
+document.scripts;
+document.referrer;
+document.lastModified;
+document.forms;
+document.doctype;
+document.cookie;</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.getElementById("id")</h3>
+        </div>
+
+        <h6 style="color:black;font-weight:bold; text-align:center;"></h6>
+        <pre><code class="language-html" data-prismjs-copy="Copy">
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document Element By Id&lt;/title&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;hassan()&quot;&gt;click me&lt;/button&gt;
+&lt;!--After Click the Button Change HTML Element Document Abc to Hassan Ali--&gt;
+&lt;p id=&quot;demo&quot;&gt;Abc&lt;/p&gt;
+&lt;script&gt;
+//Creating Function
+  function hassan(){
+    x = document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hassan Ali&quot;;
+    }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>document.getElementByTagName("name")</h3>
+        </div>
+        <p>The <code class="markcode">document.getElementByTagName("name")</code> method is used to get
+            the Element by using TagName. </p>
+
+        <pre><code class="language-html" data-prismjs-copy="Copy">
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Insertion Sort in Java Script&lt;/title&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hassan Ali&lt;/li&gt;
+  &lt;li&gt;Khan&lt;/li&gt;
+  &lt;li&gt;Balouch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;input type=&quot;number&quot; id=&quot;nnumber&quot; placeholder=&quot;Enter Number&quot; /&gt;
+&lt;button onclick=&quot;hassan()&quot;&gt;click me&lt;/button&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+  function hassan() {
+    var x = document.getElementsByTagName(&quot;LI&quot;);
+    var n = document.getElementById(&quot;nnumber&quot;).value;
+    document.getElementById(&quot;demo&quot;).innerHTML = x[n].innerHTML;
+  }
+&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>document.getElementsByClassName("name")</h3>
+        </div>
+        <p>The <code class="markcode">getElementsByClassName("name")</code> method is used to Access the
+            element by using class Name.</p>
+
+        <pre><code class="language-html" data-prismjs-copy="Copy">
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p class=&quot;phassan&quot;&gt;Hello My Name is:&lt;/p&gt;
+&lt;p class=&quot;phassan&quot;&gt;Hassan Ali&lt;/p&gt;
+&lt;button onclick=&quot;hassan()&quot;&gt;click me&lt;/button&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+  function hassan() {
+   var x = document.getElementsByClassName(&quot;phassan&quot;);
+   document.getElementById(&quot;demo&quot;).innerHTML = x.length;
+  }
+&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>document.getElementsByName(&quot;name = 'fname'&quot;)</h3>
+        </div>
+        <p>The <code class="markcode">getElementsByName(&quot;name = 'fname'&quot;)</code> method is
+            used to get the element by using name attribute. Mostly this method is used in the input elements.</p>
+
+        <pre><code class="language-html" data-prismjs-copy="Copy">
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type=&quot;text&quot; name=&quot;nametext&quot; placeholder=&quot;Enter the Text&quot;/&gt;
+&lt;button onclick=&quot;hassan()&quot;&gt;click me&lt;/button&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+  function hassan() {
+   var x = document.getElementsByName(&quot;nametext&quot;)[0].tagName;
+   document.getElementById(&quot;demo&quot;).innerHTML = x;
+
+  }
+&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+
+        <!-- <img src="../images/documents.png" alt="document"> -->
+
+
+        <!--Documents-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document</h3>
+        </div>
+        <p>The <code class="markcode">document;</code>method is used to list of all documents </p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">document;
+</pre><br />
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let a = document;
+console.log(a);
+</code></pre>
+
+
+        <!--Documents all-->
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>document.all;</h3>
+        </div>
+        <p>The <code class="markcode">document.all;</code> method is used to list of all tag with index
+            no show in the console. This method is used to access the specific element or the complete documents
+            elements. <br />In Method 02 you can pass the index number then only those element be Accessed whoes are
+            present on this index number.<br /> In Method 03 the innerHTML should be pass the access the inner Text of
+            Elements.</p>
+
+        <pre data-line="1,4,7" class="line-numbers"><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+// Method 01
+let a = document.all;
+console.log(a);
+// Method 02
+let a = document.all[5];
+console.log(a);
+// Method 03
+let a = document.all[5].innerHTML;
+console.log(a);
+</code></pre>
+
+
+        <!--Documents title-->
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.title;</h3>
+        </div>
+        <p>The <code class="markcode">document.title;</code> is return the element of title text.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">var a = document.title;</pre><br />
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+var a = document.title;
+console.log(a);
+</code></pre>
+
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.head;</h3>
+        </div>
+        <p>The <code class="markcode">document.head;</code> is return the all head element title,meta
+            tag etc. those are include on your document head tag are return.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">var a = document.head;</pre><br />
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+var a = document.head;
+console.log(a);
+</code></pre>
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.body;</h3>
+        </div>
+        <p>The <code class="markcode">document.body;</code> is return all elements in the body.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">var a = document.body;</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+var a = document.body;
+console.log(a);
+</code></pre>
+
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.links;</h3>
+        </div>
+        <p>The <code class="markcode">document.links;</code> return the list of a links present in the
+            documents.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">var a = document.links;</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let a = document.links[0];
+console.log(a);
+</code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.images;</h3>
+        </div>
+        <p>The <code class="markcode">document.images;</code> return the all images present in the
+            documents. </p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">var a = document.images;</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let a = document.images[0];
+console.log(a);
+</code></pre>
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.documentURI;</h3>
+        </div>
+        <p>The <code class="markcode">document.documentURI;</code> return the url of the documents. </p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">let a = document.documentURI;</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let a = document.documentURI;
+console.log(a);
+</code></pre>
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.domain;</h3>
+        </div>
+        <p>The <code class="markcode">document.domain;</code> method is used to return the domain of
+            current document mean website your are visiting.</p>
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">let a = document.domain;</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let a = document.domain;
+console.log(a);
+</code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.scripts;</h3>
+        </div>
+        <p>The <code class="markcode">document.scripts;</code> is used to return the javaScript Scripts
+            in the documents.By passing the index no mean script only that found on the index.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">let a = document.documentURI;</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let a = document.scripts[0];
+console.log(a);
+</code></pre>
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.referrer;</h3>
+        </div>
+        <p>The <code class="markcode">document.referrer;</code> Returns the URI of the referrer (the
+            linking document)</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">let a = document.referrer;</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let a = document.referrer;
+console.log(a);
+</code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.lastModified;</h3>
+        </div>
+        <p>The <code class="markcode">document.lastModified;</code> Returns the date and time the
+            document was updated.</p>
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">let a = document.lastModified;</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let a = document.lastModified;
+console.log(a);
+</code></pre>
+
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.forms;</h3>
+        </div>
+        <p>The <code class="markcode">document.forms;</code> return all form elements.</p>
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">let a = document.forms;</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let a = document.forms;
+console.log(a);
+</code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.doctype;</h3>
+        </div>
+        <p>The <code class="markcode">document.doctype;</code> return the document types is html or
+            other.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">let a = document.doctype;</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let a = document.doctype;
+console.log(a);
+</code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.cookie;</h3>
+        </div>
+        <p>The <code class="markcode">document.cookie;</code> return the document cookies.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">let a = document.cookie;</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let a = document.cookie;
+console.log(a);
+</code></pre>
+
+        <!--
+<div class="heading2" style="color: white; background-color: blue">
+    <h3 class="marku" > JavaScript</h3>
+</div>
+  <p>document.;</p>
+</h5>
+<p >The <code class="markcode">document.;</code></p>
+
+<h5 class="outputh">Syntax :</h5>
+<pre class="syntax">let a = document.documentURI;</pre><br />
+<pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+
+</code></pre>
+
+  -->
+
+        <div class="heading1" style="color: white; background-color: red">
+            <h3 class="marku"> DOM GET &amp; SET Values</h3>
+        </div>
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> List of All GET &amp; SET Value Methods</h3>
+        </div>
+
+        <pre class="line-numbers"><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+// Get Value Methods
+innerHTML
+innerText
+getAttribute
+getAttributeNode
+Attributes
+// Set Value Methods
+innerHTML
+innerText
+setAttribute
+Attribute
+removeAttribute
+</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>setAttribute</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+var textChange = document.getElementById('demo').innerHTML = '&lt;h2&gt;Hassan Ali&lt;h2&gt;;
+console.log(textChange);
+
+//show the Style Attributes
+var textChange = document.getElementById('demo').getAttribute('style');
+console.log(textChange);
+
+//return attribute with value
+var textChange = document.getElementById('demo').getAttributeNode('style');
+console.log(textChange);
+
+//show All Attribute and pass the index
+var textChange = document.getElementById('demo').attributes;
+textChange = document.getElementById('demo').attributes[0];
+console.log(textChange);
+</code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>setAttribute</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+var textChange = document.getElementById('demo');
+//change inner Text
+textChange.innerHTML = '&lt;h2&gt;Hassan Ali&lt;h2&gt;;
+//add color in style attribute
+textChange.attributes[2].value = &quot;color:green;&quot;;
+//remove attribute name style
+textChange.removeAttribute('style');
+console.log(textChange);
+</code></pre>
+
+        <h1 class="heading1" style="background-color: red;">DOM HTML</h1>
+        <div class="alert-message alert-success short-b">
+            Syntax use the JavaScript Change HTML<br />
+            document.getElementById(id).innerHTML = new HTML
+        </div>
+        <br />
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> DOM HTML innerHTML</h3>
+        </div>
+        <p>JavaScript DOM HTML is used to change the HTML.</p>
+        <table class="table-design">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Property</th>
+                <th scope="col">Description</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>element.innerHTML = new html content</td>
+                <td>Change the inner HTML of an element</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>element.attribute = new value</td>
+                <td>Change the attribute value of an HTML element</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>element.style.property = new style</td>
+                <td>Change the style of an HTML element</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>element.setAttribute(attribute, value)</td>
+                <td>Change the attribute value of an HTML element</td>
+            </tr>
+        </table>
+        <br />
+
+        <pre><code class="language-html" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;!--Head Section is Not Add Because we only Test the Code--&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;hassan()&quot;&gt;click me&lt;/button&gt;
+&lt;p id=&quot;demo&quot;&gt;Old Text&lt;/p&gt;
+&lt;script&gt;
+  function hassan() {
+    document.getElementById(&quot;demo&quot;).innerHTML = &quot;New Text&quot;
+  }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <ul>
+            <li>The HTML document above contains a <mark class="ccode">&lt;p&gt;</mark> element with id="demo"</li>
+            <li>We use the HTML DOM to get the element with id="demo"</li>
+            <li>A JavaScript changes the content (innerHTML) of that element to "New text!"</li>
+        </ul>
+
+        <span class="marku">Example 02:</span>
+        <pre><code class="language-html" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;!--Head Section is Not Add Because we only Test the Code--&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;hassan()&quot;&gt;click me&lt;/button&gt;
+&lt;p id=&quot;demo&quot;&gt;Old Text&lt;/p&gt;
+&lt;script&gt;
+  function hassan() {
+     var element = document.getElementById(&quot;demo&quot;);
+    element.innerHTML = &quot;New Text&quot;
+  }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+        <span class="marku">Example 03:</span>
+
+        <p>In Example 02 we Add the Picture in web page and in javascript we get the id of image and
+            change the image with other image.</p>
+        <pre><code class="language-html" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;!--Head Section is Not Add Because we only Test the Code--&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;hassan()&quot;&gt;click me&lt;/button&gt;
+&lt;image id=&quot;image01&quot; src=&quot;1.jpg&quot; width=&quot;320&quot; height=&quot;300&quot;/&gt;
+&lt;script&gt;
+  function hassan() {
+    document.getElementById(&quot;image01&quot;).src = &quot;2.jpg&quot;
+  }
+&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+        <hr />
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> element.attribute = new value</h3>
+        </div>
+        <p>The setAttribute() method adds the specified attribute to an element, and gives it the
+            specified value.If the specified attribute already exists, only the value is set/changed.</p>
+        <pre><code class="language-html" data-prismjs-copy="Copy">
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;!--Head Section is Not Add Because we only Test the Code--&gt;
+&lt;style&gt;
+.democlass {
+  color: red;
+}
+&lt;/style&gt;
+
+&lt;body&gt;
+&lt;h1 id=&quot;demo&quot;&gt;Hassan Ali&lt;/h1&gt;
+&lt;button onclick=&quot;hassan()&quot;&gt;click me&lt;/button&gt;
+&lt;script&gt;
+  function hassan() {
+    // var a = document.getElementsByTagName(&quot;H1&quot;)[0];
+    // a.setAttribute(&quot;class&quot;, &quot;democlass&quot;);
+    //Second Method
+    var a = document.getElementsByTagName(&quot;H1&quot;)[0].setAttribute(&quot;class&quot;, &quot;democlass&quot;);
+
+  }
+&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+        <h1 class="heading1" style="background-color: red;">DOM Events</h1>
+        <div class="alert-message alert-success short-b">A JavaScript can be executed when an event occurs, like when a
+            user clicks on an HTML element.<br />
+            <b>Syntax:</b> onclick=JavaScript
+        </div>
+        <br />
+
+
+        <div class="separator" style="clear: both;"><a
+                href="https://1.bp.blogspot.com/-Nok0qUFpSK4/YPP6rSTxHtI/AAAAAAAABIc/oZCRKs3QEqEALVJomjbc3avpMdMEAr74ACNcBGAsYHQ/s0/Screenshot__342_-removebg-preview.png"
+                style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0"
+                    data-original-height="374" data-original-width="666"
+                    src="https://1.bp.blogspot.com/-Nok0qUFpSK4/YPP6rSTxHtI/AAAAAAAABIc/oZCRKs3QEqEALVJomjbc3avpMdMEAr74ACNcBGAsYHQ/s0/Screenshot__342_-removebg-preview.png" /></a>
+        </div>
+
+
+        <p>Event is used in the inline HTML. When a user click on the button,text,images,videos the
+            event is occur. we have used the mostly event in the <code class="markcode">addEventListener()</code> in the
+            external javascript b/c the code repeat in the inline HTML and not seet the best code in javascript code is
+            present in HTML file.When using the addEventListener() method, the JavaScript is separated from the HTML
+            markup, for better readability and allows you to add event listeners even when you do not control the HTML
+            markup. </p>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Show Date and Time</h3>
+        </div>
+        <pre><code class="language-javascript rainbow-braces" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;button id=&quot;myBtn&quot;l&gt;Try it&lt;/button&gt;
+&lt;p id=&quot;demo&quot;l&gt;&lt;/p&gt;
+&lt;script&gt;
+document.getElementById(&quot;myBtn&quot;).onclick = displayDate;
+function displayDate() {
+document.getElementById(&quot;demo&quot;).innerHTML = Date();
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Show Date and Time</h3>
+        </div>
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;style&gt;
+.text{
+    background-color: blue;
+    color: white;
+    font-family: cursive;
+    font-size: 16px;
+    width: 40%;
+    height:80px;
+}
+&lt;/style&gt;
+&lt;body&gt;
+             &lt;!-- Example 01 --&gt;
+&lt;button class=&quot;text&quot; onclick=&quot;this.innerHTML = 'khan'&quot;&gt;Try it&lt;/button&gt;
+            &lt;!-- Example 02 --&gt;
+&lt;button class=&quot;text&quot; onclick=&quot;this.innerHTML = 'OOPS!'&quot;&gt;Try it&lt;/button&gt;
+             &lt;!-- Example 03 --&gt;
+&lt;h1 id=&quot;changetext&quot; onclick=&quot;changeText(this)&quot;&gt;Click on Text&lt;/h1&gt;
+            &lt;!-- Example 04 --&gt;
+&lt;button class=&quot;text&quot; onclick=&quot;this.innerHTML = Date()&quot;&gt;Click to See Date&lt;/button&gt;
+            &lt;!-- Example 05 --&gt;
+&lt;button class=&quot;text&quot; id=&quot;dateTime&quot; onclick=&quot;&quot;&gt;Click to See Date&lt;/button&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function changeText(id){
+id.innerHTML = &quot;Text Changed!&quot;;
+id.style.color = &quot;red&quot;;
+}
+
+//Example 05
+var a = document.getElementById(&quot;dateTime&quot;).onclick = displayDate;
+function displayDate(){
+document.getElementById(&quot;demo&quot;).innerHTML = Date();
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+
+        <!--addEventListener() -->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> addEventListener() Method</h3>
+        </div>
+
+        <p><code class="markcode">addEventListener()</code> method is same as the Events occurs on the
+            click. But by using the addEventListener() in JavasScript External file the code Readablily is better.The
+            main purpose of this method is the event occur when the user click or mouse over in the element.In <code
+                class="markcode">addEventListener()</code> Event Parameter you can use only click not use world "on"
+            with Events.</p>
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">target.addEventListener(type, listener);
+target.addEventListener(type, listener, options);
+target.addEventListener(type, listener, useCapture);
+target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUntrusted is Firefox only
+</pre>
+        <h5 class="outputh">HTML FILE:</h5>
+        <pre><code class="language-html match-braces" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p id=&quot;demo&quot;&gt;Hello Click Me&lt;/p&gt;
+&lt;script src=&quot;hassanali.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <h5 class="outputh">JavaScript File :</h5>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+document.getElementById('demo').addEventListener('click',function(){
+this.style.backgroundColor = &quot;green&quot;;
+this.style.color = &quot;white&quot;;
+this.style.fontFamily = &quot;verdana&quot;;
+});
+
+document.getElementById('demo').addEventListener('mouseenter',function(){
+this.style.border = &quot;2px solid Black&quot;;
+this.style.cursor = &quot;Pointer&quot;;
+});
+</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> use Capture Parameter in addEventListener( )</h3>
+        </div>
+        <p>By Using the Capture when we have two, and i have two events. first when we click the inner
+            div then inner div first occur then outer div occur. In Caputure parameter we pass only <code
+                class="markcode">true/False</code> as a parameter.</p>
+
+
+
+        <h5 class="outputh">HTML FILE:</h5>
+        <pre><code class="language-html match-braces" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;style&gt;
+#outer{
+    background-color:rgb(138, 241, 138);
+    width:460px;
+    height: 440px;
+    margin:0 auto;
+}
+#inner{
+    background-color:rgb(62, 123, 238);
+    width:360px;
+    height: 260px;
+    margin:auto;
+    margin-top:60px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;outer&quot;&gt;
+&lt;h2&gt;outer&lt;/h2&gt;
+&lt;div id=&quot;inner&quot;&gt;
+  &lt;h2&gt;Inner&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src=&quot;hassanali.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <h5 class="outputh">JavaScript File :</h5>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let outer = document.querySelector("#inner");
+let inner = document.querySelector("#outer");
+
+//first run outer then inner
+inner.addEventListener('click',function(){
+window.alert("This is inner");
+});
+outer.querySelector("#outer").addEventListener('click',function(){
+window.alert("This is Outer");
+});
+
+//first run inner then outer
+inner.addEventListener('click',function(){
+window.alert("This is inner");
+},true);
+outer.addEventListener('click',function(){
+window.alert("This is Outer");
+},true);
+
+//Call Defaults first outer then inner div
+inner.addEventListener('click',function(){
+window.alert("This is inner");
+},false);
+outer.addEventListener('click',function(){
+window.alert("This is Outer");
+},false);
+</code></pre>
+
+
+
+        <!--DOM Remove Listener Methods-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> EventTarget.removeEventListener()</h3>
+        </div>
+        <p><code class="markcode">removeEventListener()</code> method is used to remove the <code
+                class="markcode">addEventListener()</code> method from the coding.</p>
+
+        <h5 class="outputh">HTML FILE:</h5>
+        <pre><code class="language-html match-braces" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p id=&quot;demo&quot;&gt;Hello Click Me&lt;/p&gt;
+&lt;script src=&quot;hassanali.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <h5 class="outputh">JavaScript File :</h5>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let x = document.getElementById('demo');
+x.addEventListener('click',abc());
+function abc(){
+this.style.backgroundColor = "green";
+this.style.color = "white";
+this.style.fontFamily = "verdana";
+}
+//Use For Remove the Above Event
+x.addEventListener('click',xyz());
+function xyz(){
+x.removeEventListener('click',abc());
+}
+</code></pre>
+
+
+
+        <h1 class="heading1" style="background-color: red;">DOM Form Events</h1>
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> List of All Form Events</h3>
+        </div>
+        <pre class="line-numbers"><code class="language-javascript match-braces" data-prisms-copy="Copy">
+onafterprint &amp; onbeforeprint
+keydown
+keypress
+keyup
+focus() &amp;     blur()
+oninput
+change
+select
+submit
+invalid
+</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> onafterprint &amp; onbeforeprint</h3>
+        </div>
+        <h5 class="outputh">onafterprint</h5>
+        <p>This event is use to show the message before print the document.</p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body onafterprint=&quot;myFunction()&quot;&gt;
+&lt;button onclick=&quot;window.print()&quot;&gt;Click to Print Message&lt;/button&gt;
+&lt;script&gt;
+function myFunction() {
+alert(&quot;Your Document is Printed&quot;);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <h5 class="outputh">onbeforeprint</h5>
+        <p>This event is used to show the message after print the document.</p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body onbeforeprint=&quot;myFunction()&quot;&gt;
+&lt;button onclick=&quot;window.print()&quot;&gt;Click to Print Message&lt;/button&gt;
+&lt;script&gt;
+function myFunction() {
+alert(&quot;This document is now being printed&quot;);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 6. oninput</h3>
+        </div>
+        <h5 class="outputh">HTML FILE:</h5>
+        <pre><code class="language-html match-braces" data-prismjs-copy="Copy">
+&lt;form action=&quot;#&quot;&gt;
+&lt;label for=&quot;fname&quot;&gt;First Name:&lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;firstname&quot; oninput=&quot;oninputFunction()&quot;&gt;
+
+&lt;label for=&quot;fname&quot;&gt;Middle Name:&lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;middlename&quot; oninput=&quot;oninputFunction()&quot;&gt;
+
+&lt;label for=&quot;fname&quot;&gt;Last Name:&lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;lastname&quot; oninput=&quot;oninputFunction()&quot;&gt;
+
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;label for=&quot;fname&quot;&gt;Father Name:&lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;&quot; &gt;
+&lt;br/&gt;
+&lt;label for=&quot;Country&quot;&gt;Country&lt;/label&gt;
+&lt;select name=&quot;sss&quot; id=&quot;ss&quot;&gt;
+&lt;option value=&quot;opt&quot;&gt;Pakistan 1&lt;/option&gt;
+&lt;option value=&quot;opt&quot;&gt;Pakistan 2&lt;/option&gt;
+&lt;option value=&quot;opt&quot;&gt;Pakistan 3&lt;/option&gt;
+&lt;option value=&quot;opt&quot;&gt;Pakistan 4&lt;/option&gt;
+&lt;/select&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; class=&quot;btn submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+        <h5 class="outputh">CSS FILE:</h5>
+        <pre><code class="language-css match-braces" data-prismjs-copy="Copy">
+*{
+margin:0;
+padding: 0;
+}
+
+body{
+background:linear-gradient(135deg,#71b7e6,#802fa0);
+}
+input[type=text],select,option{
+width: 98%;
+height: 25px;
+border-radius: 4px;
+margin:5px;
+font-size: 18px;
+background-color: #fff;
+border: none;
+}
+label{
+color:white;
+font-family: verdana;
+font-weight: bold;
+}
+.btn{
+font-family: cursive;
+font-size:20px;
+border-radius: 10px;
+border:none;
+width: 100%;
+margin-top: 10px;
+background-color: green;
+color:white;
+cursor:pointer;
+}
+input[type=text]:focus,select:focus,option:focus{
+background-color: #ece9e9;
+outline: none;
+}
+</code></pre>
+        <h5 class="outputh">JavaScript FILE:</h5>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+function oninputFunction(){
+let first = document.getElementById('firstname').value;
+let midle = document.getElementById('middlename').value;
+let last = document.getElementById('lastname').value;
+document.getElementById(&quot;demo&quot;).innerHTML = first +&quot; &quot;+ midle +&quot; &quot;+ last;
+}
+</code></pre>
+
+
+
+        <h1 class="heading1" style="background-color: red;">DOM CSS</h1>
+        <div class="alert-message alert-success short-b">Three Method is used in Style in JavaScript;<br />
+            <b>First :</b> document.getElementById(id).style.property = new style;<br />
+            <b>Second :</b> Add the Class By using this step;<br />document.getElementById(id).className = "Add
+            Name";<br />
+            <b>Third :</b> type <code class="markcode">classList</code> show the All class in Strings
+        </div>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.getElementById(id).style.property = new style;</h3>
+        </div>
+
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 id=&quot;p2&quot;&gt;Hassan Ali&lt;/h1&gt;
+&lt;button onclick=&quot;hassan()&quot;&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+function hassan(){
+var x = document.getElementById(&quot;p2&quot;);
+x.style.color = &quot;red&quot;;
+x.style.fontFamily = &quot;Arial&quot;;
+x.style.borderBottom = &quot;2px solid green&quot;;
+x.style.textAlign = &quot;center&quot;;
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Element.className();</h3>
+        </div>
+        <p>demo id is the simple paragraph is id.</p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+    var textChange = document.getElementById('demo');
+    textChange.className;  // see previous class name name
+    textChange.className = 'xyz';
+    console.log(textChange);</code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Element.classList( );</h3>
+        </div>
+        <p><code class="markcode">add()</code> Method is used to add the class by passing String
+            parameter in this methods.
+            <code class="markcode">remove()</code> method in classList is used to remove the class.
+        </p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+        var textChange = document.querySelector("#demo");
+        textChange.className = 'xyz abc';
+        var a = textChange.classList;
+        console.log(a);
+        //add new class using classList simply add() method is used
+        var textChange = document.querySelector("#demo");
+        textChange.classList.add("Hassan");
+        console.log(textChange);
+
+        var a = document.querySelector("#demo");
+        a.classList.add("Hassan","khan");
+        var b = a.classList;
+        console.log(b);
+
+        //Remove the Class by using classList Methods
+
+        var a = document.querySelector("#demo");
+        a.classList.remove("Hassan","Ali");
+        var b = a.classList;
+        console.log(b);</code></pre>
+
+
+        <h1 class="heading1" style="background-color: red;">DOM CSS</h1>
+        <div class="alert-message alert-success short-b">Three Method is used in Style in JavaScript;<br />
+            <b>First :</b> document.getElementById(id).style.property = new style;<br />
+            <b>Second :</b> Add the Class By using this step;<br />document.getElementById(id).className = "Add
+            Name";<br />
+            <b>Third :</b> type <code class="markcode">classList</code> show the All class in Strings
+        </div>
+        <br />
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> document.getElementById(id).style.property = new style;</h3>
+        </div>
+
+        <pre><code class="language-javascript" data-prismjs-copy="Copy">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 id=&quot;p2&quot;&gt;Hassan Ali&lt;/h1&gt;
+ &lt;button onclick=&quot;hassan()&quot;&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+function hassan(){
+var x = document.getElementById(&quot;p2&quot;);
+x.style.color = &quot;red&quot;;
+x.style.fontFamily = &quot;Arial&quot;;
+x.style.borderBottom = &quot;2px solid green&quot;;
+x.style.textAlign = &quot;center&quot;;
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Element.className();</h3>
+        </div>
+        <p>demo id is the simple paragraph is id.</p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+var textChange = document.getElementById('demo');
+textChange.className;  // see previous class name name
+textChange.className = 'xyz';
+console.log(textChange);</code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Element.classList( );</h3>
+        </div>
+        <p><code class="markcode">add()</code> Method is used to add the class by passing String
+            parameter in this methods.
+            <code class="markcode">remove()</code> method in classList is used to remove the class.
+        </p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+var textChange = document.querySelector("#demo");
+textChange.className = 'xyz abc';
+var a = textChange.classList;
+console.log(a);
+//add new class using classList simply add() method is used
+var textChange = document.querySelector("#demo");
+textChange.classList.add("Hassan");
+console.log(textChange);
+
+var a = document.querySelector("#demo");
+a.classList.add("Hassan","khan");
+var b = a.classList;
+console.log(b);
+
+//Remove the Class by using classList Methods
+
+var a = document.querySelector("#demo");
+a.classList.remove("Hassan","Ali");
+var b = a.classList;
+console.log(b);</code></pre>
+
+
+
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>List of All Array Methods</h3>
+        </div>
+        <pre class="line-numbers"><code class="language-javascript match-braces rainbow-braces" data-prismjs-copy="Copy">
+Array.prototype.concat( );
+Array.prototype.copyWithin( );
+Array.prototype.entries( );
+Array.prototype.every( );
+Array.prototype.some( );
+Array.prototype.fill( );
+Array.prototype.filter( );
+Array.prototype.find( );
+Array.prototype.indexOf( );
+Array.prototype.findIndex( );
+Array.prototype.lastIndexOf( );
+Array.prototype.forEach( );
+Array.prototype.isArray( );
+Array.prototype.includes( );
+Array.prototype.join( );
+Array.prototype.keys( );
+Array.prototype.map( );
+Array.prototype.pop( );
+Array.prototype.push( );
+Array.prototype.sort( );
+Array.prototype.splice( );
+Array.prototype.reverse( );
+Array.prototype.shift( );
+Array.prototype.unshift( );
+Array.prototype.slice( );
+Array.prototype.toString( );
+</code></pre><br />
+
+        <br />
+        <!--Array Creating-->
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> How to Create Array?</h3>
+        </div>
+        <p>JavaScript Array Creating Methods:</p>
+        <pre class="line-numbers" data-line="1,6,4"><code class="language-javascript match-braces rainbow-braces" data-prismjs-copy="Copy">   // &lt;Method 01&gt;
+let a = new Array(5);
+a = [1,2,3,4,5];
+// &lt;Method 02&gt;
+let a = new Array(&quot;Hassan&quot;,&quot;Ali&quot;,&quot;Khan&quot;,&quot;Balouch&quot;)
+// &lt;Method 03&gt;
+let a = [&quot;Hassan&quot;,&quot;Ali&quot;,&quot;Khan&quot;];
+//ForEach Loop Print the Array Element
+a.forEach(element =&gt;console.log(element));
+</code></pre><br />
+        <!--Array Delete and Modify-->
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> How to Delete &amp; Modify Array?</h3>
+        </div>
+        <p>In javaScript when you give the other value in index then value should be updated on the
+            Array and if you can delete the element in the array then simply type delete and pass the index of the
+            array.</p>
+        <pre class="line-numbers" data-line="1,6"><code class="language-javascript match-braces rainbow-braces" data-prismjs-copy="Copy">
+// &lt;Method 01&gt;
+let a = [1,2,3,4,5];
+console.log("Modify Element");
+a[0]= 6;
+console.log(a);
+// &lt;Method 02&gt;
+console.log("Delete Element")
+delete a[4];
+console.log(a);
+</code></pre><br />
+        <!--Array Concat()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.concat( );</h3>
+        </div>
+        <p>The <code class="markcode">concat()</code> method is used to merge two or more arrays. This
+            method does not change the existing arrays, but instead returns a new array.</p>
+        <pre class="syntax">	concat()
+concat(value0)
+concat(value0, value1)
+concat(value0, value1, ... , valueN) </pre>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const a = ["a","b","c"];
+const b = ["d","e","f"];
+const c = a.concat(b);
+//ForEach Print the concat Loop
+c.forEach(element =&gt;
+document.write(element+",")
+);
+</code></pre>
+        <!--Array copyWithin()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.copyWithin( )</h3>
+        </div>
+        <p>The <code class="markcode">copyWithin()</code> The copyWithin() method shallow copies part of
+            an array to another location in the same array and returns it without modifying its length.<br />
+            The <code class="markcode">copyWithin()</code> method copies array elements to another position in an array,
+            overwriting the existing values.
+            The <code class="markcode">copyWithin()</code> does not add items to the array.<code
+                class="markcode">copyWithin()</code> overwrites the original array.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">	copyWithin(target)
+copyWithin(target, start)
+copyWithin(target, start, end)
+</pre><br />
+        <p>In Blow Example the <code class="markcode">copyWithin()</code> we copy first we added the
+            target index 0 mean copy array target the index 0 then we start of coping array index is 3 then end of the
+            copying array is 4 mean that the array copy stop at index 4.After copy the array then overwrite the existing
+            target index.<br />
+            You can see in the comment they target index is 0 and start copy 3 to last index then target overwrite start
+            index 0 to copy elements.</p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const a = [1,2,3,4,5,6];
+const copy = a.copyWithin(0,3,4);
+//const copy = a.copyWithin(0,3);
+copy.forEach(element =&gt;
+console.log(element)
+);
+</code></pre>
+
+
+        <!--Array entries()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.entries( )</h3>
+        </div>
+        <p>The <code class="markcode">entries()</code>method returns a new Array Iterator object that
+            contains the key/value pairs for each index in the array.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">
+array.entries()
+</pre><br />
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const array = ['a', 'b', 'c'];
+const index = array.entries();
+for(const b of index){
+ console.log(b);
+}
+</code></pre>
+
+
+        <!--Array entries()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.every( );</h3>
+        </div>
+        <p>The <code class="markcode">every()</code> method returns true if all elements in an array
+            pass a test (provided as a function).It is used the check the values is greater then or smaller then
+            available in array mean e.g the age of student check in the array is greater then 18 or less then in array
+            and fetch the data.<br />
+            <code class="markcode">every()</code> does not execute the function for empty array elements.
+            <code class="markcode">every()</code> does not change the original array.<code
+                class="markcode">every()</code> return true if the all element in array pass the condition otherwise
+            false.
+        </p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">
+array.every(function(currentValue, index, arr), thisValue);
+</pre>
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const a = [1,2,3,4,5,6];
+let check = a.every(hassan);
+function hassan(a){
+    return a &gt;= 1 ;
+}
+console.log(check); //True b/c all element follow condition
+</code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.some( )</h3>
+        </div>
+        <p>The <code class="markcode">some()</code> method tests whether at least one element in the
+            array passes the test implemented by the provided function. It returns true if, in the array, it finds an
+            element for which the provided function returns true; otherwise it returns false. It doesn't modify the
+            array.</p>
+
+        <p>In blow example you can see that it will be true when one value is follow their condition or
+            other every() method all the element of array follow the condition then true.</p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const a = [1,2,3,4,5,6];
+let check = a.some(hassan);
+function hassan(a){
+    return a &gt; 5 ;
+}
+console.log(check);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">true</pre>
+        <br />
+        <!--Array fill()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.fill( )</h3>
+        </div>
+        <p>The <code class="markcode">fill()</code>method changes all elements in an array to a static
+            value, from a start index (default 0) to an end index (default array.length). It returns the modified
+            array.<br />
+            In<code class="markcode">copywithin()</code>, we copy the part of the array and target to overwrite the
+            array.But in <code class="markcode">fill()</code> method we have pass the value then give the start index of
+            end index where the value is replace.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">array.fill(value, start, end)</pre><br />
+        <p>In blow example you can see the value hassan is passed then replace the value on index 0 and
+            stop the before index 1. if we have pass the index 0 to 3 then the 3 value will be change to hassan.</p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const a = [1,2,3,4,5,6];
+let check = a.fill("hassan",0,1);
+console.log(check);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">
+[ 'hassan', 2, 3, 4, 5, 6 ]</pre>
+        <br />
+
+
+
+        <!--Array filter()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.filter( )</h3>
+        </div>
+        <p>The <code class="markcode">filter()</code> The filter() method creates an array filled with
+            all array elements that pass a test (provided by a function).You can Pass the value from filter then
+            filter() return if the value of condition in function is true, But <code class="markcode">every()</code>
+            method is used to check the condition and return true or false if all the value are correct to the
+            condition.
+            <br />
+            <code class="markcode">filter()</code> does not execute the function for empty array elements.
+            <code class="markcode">filter()</code> does not change the original array.
+        </p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">    array.filter(function(currentValue, index, arr), thisValue)</pre><br />
+        <p>In blow example first we pass the array into function then function will pass the filter
+            method if the condition is true the value are find above the condition then they return the values they are
+            follow the condition.</p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const age = [18,12,23,14,25,46];
+let check = age.filter(hassan);
+function hassan(age){
+    return age&gt;18;
+}
+console.log(check);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">  [ 23, 25, 46 ]</pre>
+        <br />
+
+
+        <!--Array filter()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.find( )</h3>
+        </div>
+        <p>The <code class="markcode">find()</code> method returns the value of the first element in the
+            provided array that satisfies the provided testing function. It cann't return all the number is follow the
+            condition, and stop after find the first number whoes follow the conditions.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">array.find();</pre><br />
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const age = [18,12,23,14,25,46];
+let check = age.find(hassan);
+function hassan(age){
+    return age&gt;18;
+}
+console.log(check);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">23</pre>
+        <br />
+
+        <!--indexOf-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.indexOf( );</h3>
+        </div>
+        <p>The <code class="markcode">indexOf()</code>method returns the first index at which a given
+            element can be found in the array, or -1 if it is not present.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <p>item is the add the search item to find the search item and start is the add the start index
+            where start from searching.</p>
+        <pre class="syntax">array.indexOf(item, start)</pre><br />
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const name = ["Hassan","Ali","Khan","Balouch","Hassan","Ali"];
+let check = name.indexOf("Ali");
+console.log(check);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output"> 1</pre>
+        <br />
+
+
+        <!--lastIndexOF()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.lastIndexOf( )</h3>
+        </div>
+        <p>The <code class="markcode">lastIndexOf()</code> method returns the last index at which a
+            given element can be found in the array, or -1 if it is not present. The array is searched backwards,
+            starting at fromIndex.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">Array.lastIndexOf();</pre><br />
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const name = ["Hassan","Ali","Khan","Balouch","Hassan","Ali"];
+let check = name.lastIndexOf("Ali");
+console.log(check);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output"> 5</pre>
+        <br />
+
+
+
+        <!--findIndex-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.findIndex( );</h3>
+        </div>
+        <p>The <code class="markcode">findIndex()</code> method returns the index of the first element
+            in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no
+            element passed the test.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax"> array.findIndex( );</pre><br />
+        <p>In blow example you can see the age array. findIndex() check the array find the number
+            location of the find the index of the number.</p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const age = [18,12,23,14,25,46];
+let check = age.findIndex(hassan);
+
+function hassan(age){
+return age&gt;18;
+}
+console.log(check);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output"> 2</pre>
+        <br />
+
+
+        <!--forEach()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.forEach( );</h3>
+        </div>
+        <p>The <code class="markcode">forEach()</code> method executes a provided function once for each
+            array element.This Method is used for print the all element in the array once.</p>
+
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const array = ['a', 'b', 'c'];
+array.forEach(element =&gt; console.log(element));
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">  a
+b
+c</pre><br />
+
+        <!--isArray()-->
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.isArray( )</h3>
+        </div>
+        <p>The <code class="markcode">isArray()</code> method determines whether the passed value is an
+            Array .</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">Array.isArray(Pass the Array)</pre><br />
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+Array.isArray([1, 2, 3]);  // true
+Array.isArray({foo: 123}); // false
+Array.isArray('foobar');   // false
+Array.isArray(undefined);  // false
+</code></pre><br />
+
+        <!--includes()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.includes( )</h3>
+        </div>
+        <p>The <code class="markcode">includes()</code>method determines whether an array includes a
+            certain value among its entries, returning true or false as appropriate.When pass the value in the include()
+            if the value is present in the array then it return true otherwise it return false.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <p>element is the search element enter and start is the Start from searching the element.</p>
+        <pre class="syntax">includes(searchElement)
+array.includes(element, start);</pre><br />
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const age = [18,12,23,14,25,46];
+let check = age.includes(18);
+console.log(check);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output"> true</pre>
+        <br />
+
+
+        <!--Join()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.join( )</h3>
+        </div>
+        <p>The <code class="markcode">isArray()</code> method creates and returns a new string by
+            concatenating all of the elements in an array (or an array-like object), separated by commas or a specified
+            separator string. If the array has only one item, then that item will be returned without using the
+            separator.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">join()
+join(separator)
+</pre><br />
+        <p></p>
+        <pre class="line-numbers" data-line="1,5,9,13"><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+//Method 01
+const name = ["Hassan","Ali","Khan","Balouch"];
+let check = name.join(" ");
+console.log(check);
+//Method 02
+const name = ["Hassan","Ali","Khan","Balouch"];
+let check = name.join("-");
+console.log(check);
+//Method 03
+const name = ["Hassan","Ali","Khan","Balouch"];
+let check = name.join(",");
+console.log(check);
+//Method 04
+const name = ["Hassan"];
+let check = name.join(",");
+console.log(check);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">
+Method 01 : Hassan Ali Khan Balouch
+Method 02 : Hassan-Ali-Khan-Balouch
+Method 03 : Hassan,Ali,Khan,Balouch
+Method 04 : Hassan</pre>
+        <br />
+
+
+        <!--Keys()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.keys( )</h3>
+        </div>
+        <p>The <code class="markcode">keys()</code> method returns a new Array Iterator object that
+            contains the keys for each index in the array.keys() does not change the original array.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">array.keys()</pre><br />
+        <pre class="line-numbers"><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const name = ["Hassan","Ali","Khan"];
+let keys = name.keys();
+for(let b of keys){
+console.log(b);
+}
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">    0
+1
+2</pre>
+        <br />
+
+
+        <!--map()-->
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.map( )</h3>
+        </div>
+        <p>The <code class="markcode">map()</code> method creates a new array with the results of
+            calling a function for every array element.The <code class="markcode">map()</code> method calls the provided
+            function once for each element in an array, in order.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">array.map(function(currentValue, index, arr), thisValue)</pre><br />
+        <table>
+            <tr>
+                <th style="width:25%">Parameter</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><em>function(currentValue, index, arr)</em></td>
+                <td>Required. A function to be run for each element in the array.<br>Function arguments:
+                    <table class="ws-table-all notranslate">
+                        <tr>
+                            <th style="width:25%">Argument</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td><em>currentValue</em></td>
+                            <td>Required. The value of the current element</td>
+                        </tr>
+                        <tr>
+                            <td><em>index</em></td>
+                            <td>Optional. The array index of the current element</td>
+                        </tr>
+                        <tr>
+                            <td><em>arr</em></td>
+                            <td>Optional. The array object the current element belongs to</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><em>thisValue</em></td>
+                <td>Optional. A value to be passed to the function to be used as its "this" value.<br>If this parameter
+                    is empty, the value "undefined" will be passed as its "this" value</td>
+            </tr>
+        </table>
+        <pre class="line-numbers" data-line="1,5,9,13"><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+//Method 01
+const name = [1,2,3,4];
+let check = name.map(x=&gt;x*2);
+console.log(check);
+//Method 02
+const name = [1,2,3,4];
+let check = name.map(x=&gt;x+1);
+console.log(check);
+//Method 03
+const numbers = [4, 9, 16, 25];
+const newArr = numbers.map(Math.sqrt)
+console.log(newArr);
+//Method 04
+const numbers = [65, 44, 12, 4];
+const newArr = numbers.map(myFunction)
+function myFunction(num) {
+return num * 10;}
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">
+Method 01 : [ 2, 4, 6, 8 ]
+Method 02 : [ 2, 3, 4, 5 ]
+Method 03 : [ 2, 3, 4, 5 ]
+Method 04 : [ 650, 440, 120, 40 ]</pre>
+        <br />
+
+        <!--pop()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Array.prototype.pop( )</h3>
+        </div>
+        <p>The <code class="markcode">pop()</code> method removes the last element from an array and
+            returns that element. This method changes the length of the array.The <code class="markcode">pop()</code>
+            method removes the last element of an array.pop() returns the element it removes.pop() changes the length of
+            the array.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">array.pop();</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const name = ["Hassan","Ali","Khan"];
+name.pop();
+name.forEach(element=&gt;console.log(element));
+
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">
+Khan
+Hassan
+Ali</pre>
+        <br />
+
+        <!--push()-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.push( )</h3>
+        </div>
+        <p>The <code class="markcode">push()</code> method adds one or more elements to the end of an
+            array and returns the new length of the array.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">push(element0)
+push(element0, element1)
+push(element0, element1, ... , elementN)
+</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const animals = ['pigs', 'goats', 'sheep'];
+
+const count = animals.push('cows');
+console.log(count);
+
+console.log(animals);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">
+4
+Array ["pigs", "goats", "sheep", "cows"]
+</pre>
+        <br />
+
+        <!--sort()-->
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.sort( )</h3>
+        </div>
+        <p>The <code class="markcode">sort()</code> method sorts the elements of an array in place and
+            returns the sorted array. The default sort order is ascending, built upon converting the elements into
+            strings, then comparing their sequences of UTF-16 code units values.
+
+            The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">// Functionless
+sort()
+
+// Arrow function
+sort((firstEl, secondEl) =&gt; { ... } )
+
+// Compare function
+sort(compareFn)
+
+// Inline compare function
+sort(function compareFn(firstEl, secondEl) { ... })
+</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+//Method 01
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+//Method 02
+const number = [5,4,3,2,1];
+number.sort();
+console.log(number);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">Method 01 : Array ["Dec", "Feb", "Jan", "March"]
+Method 02 :[1, 2, 3, 4, 5]</pre>
+        <br />
+        <!--splice()-->
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.splice( )</h3>
+        </div>
+        <p>The <code class="markcode">splice()</code> method changes the contents of an array by
+            removing or replacing existing elements and/or adding new elements in place. To access part of an array
+            without modifying it.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2, itemN)
+</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+// inserts at index 1
+console.log(months);
+
+months.splice(4, 1, 'May');
+// replaces 1 element at index 4
+console.log(months);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">
+&gt; Array ["Jan", "Feb", "March", "April", "June"]
+&gt; Array ["Jan", "Feb", "March", "April", "May"]
+</pre>
+
+
+
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.reverse( )</h3>
+        </div>
+        <p>The <code class="markcode">reverse()</code> method is used to reverse the array.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">reverse()</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const array1 = ['one', 'two', 'three'];
+const reversed = array1.reverse();
+console.log('reversed:', reversed);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">"reversed:" Array ["three", "two", "one"]</pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.shift( )</h3>
+        </div>
+        <p>The <code class="markcode">shift()</code> method removes the first element from an array and
+            returns that removed element. This method changes the length of the array.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">shift()</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const array = [1, 2, 3];
+const firstElement = array.shift();
+console.log(array1);
+console.log(firstElement);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">Array [2, 3]
+1</pre>
+
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3>Array.prototype.unshift( )</h3>
+        </div>
+        <p>The <code class="markcode">unshift()</code> method adds one or more elements to the beginning
+            of an array and returns the new length of the array.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">unshift(element0)
+unshift(element0, element1)
+unshift(element0, element1, ... , elementN)
+</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const array = [1, 2, 3];
+array.unshift(4, 5);
+console.log(array);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">  [4, 5, 1, 2, 3]</pre>
+        <br />
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.slice( )</h3>
+        </div>
+        <p>The <code class="markcode">slice()</code> method is used to show the specific part of the
+            string.In this Start index with 0 of string, and String display with start number and end number not print
+            of index value.method returns a shallow copy of a portion of an array into a new array object selected from
+            start to end (end not included) where start and end represent the index of items in that array. The original
+            array will not be modified.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">array.slice(start_no,end_no);</pre><br />
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+console.log(animals.slice(0,3));
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">Array ["ant", "bison", "camel"]</pre>
+        <br />
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Array.prototype.toString( )</h3>
+        </div>
+        <p>The <code class="markcode">toString()</code> method returns a string representing the
+            specified array and its elements.</p>
+
+        <h5 class="outputh">Syntax :</h5>
+        <pre class="syntax">toString()</pre><br />
+        <p></p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+//Method 01
+const array1 = [1, 2, 'a', '1a'];
+console.log(array1.toString());
+//Method 02
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let text = fruits.toString();
+console.log(text);
+</code></pre>
+        <h5 class="outputh">Output :</h5>
+        <pre class="output">
+Method 01 : 1,2,a,1a
+Method 02 : Banana,Orange,Apple,Mango
+</pre>
+
+        <!--
+
+
+  <h5 class="question" style="color:white;background-color:blue;">
+<p>Array.prototype.( )</p>
+</h5>
+<p >The <code class="markcode">()</code></p>
+
+<h5 class="outputh">Syntax :</h5>
+<pre class="syntax"></pre><br />
+<p ></p>
+<pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+
+</code></pre>
+<h5 class="outputh">Output :</h5>
+<pre class="output">
+
+</pre>
+<br />
+
+
+<p ></p>
+<code class="markcode">concat()</code>
+<br />
+<div class="heading2" style="color: white; background-color: blue">
+            <h3> element.attribute = new value</h3>
+        </div>13. </p></h5>
+<pre><code class="language-java match-braces" data-prismjs-copy="Copy">
+
+</code></pre>
+ -->
+
+
+
+        <h1 class="heading1" style="background-color: red;">JavaScript Arrays Programs</h1>
+
+        <!--code  1-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 1. Using a loop, iterate through this array and console.log all of the people?</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let people = ["Greg", "Mary", "Devon", "James"];
+for(let i =0; i&lt; people.length; i++){
+console.log(people[i]);
+}
+</code></pre>
+
+        <!--code  2-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 2. Write the command to remove "Greg" from the array.</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let people = ["Greg", "Mary", "Devon", "James"];
+people.shift();  //Shift remove first element in array
+for(let i =0; i&lt; people.length; i++){
+console.log(people[i]);
+}
+</code></pre>
+        <!--code 3-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 3. Write the command to remove "James" from the array?</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let people = ["Greg", "Mary", "Devon", "James"];
+people.pop();  //Remove Last element in array
+for(let i =0; i&lt; people.length; i++){
+console.log(people[i]);
+}
+</code></pre>
+
+
+        <!--code-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 4. Write the command to add "Matt" to the front of the array?</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let people = ["Greg", "Mary", "Devon", "James"];
+console.log("\t\t\James in Array");
+people.pop();  //Remove Last element in array
+for(let i =0; i&lt; people.length; i++){
+console.log(people[i]);
+}
+</code></pre>
+
+
+
+        <!--code 5-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 5.Write the command to add your name to the end of the array?</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let people = ["Greg", "Mary", "Devon", "James"];
+people.push("Hassan Ali Khan");
+for(let i =0; i&lt; people.length; i++){
+console.log(people[i]);
+}
+</code></pre>
+
+
+        <!--code 6-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 6. Using a loop, iterate through this array and after console.log-ing "Mary", exit from the loop?</h3>
+        </div>
+        <pre><code class="language-javascript match-braces rainbow-braces" data-prismjs-copy="Copy">
+let people = ["Greg", "Mary", "Devon", "James"];
+for(let i=0; i&lt;people.length; i++){
+if(i&gt;1){
+    break; //Loop Exit After Mary
+}
+console.log(people[i]);
+}
+</code></pre>
+
+        <!--code 7-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 7. Write the command that gives the indexOf where "Mary" is located?</h3>
+        </div>
+        <pre><code class="language-javascript match-braces rainbow-braces" data-prismjs-copy="Copy">
+let people = ["Greg", "Mary", "Devon", "James"];
+console.log(people.indexOf("Mary"));
+</code></pre>
+        <br />
+
+
+        <!--code-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 8. Write the command that gives the indexOf where "Foo" is located (this should return -1)?</h3>
+        </div>
+        <pre><code class="language-javascript match-braces rainbow-braces" data-prismjs-copy="Copy">
+let people = ["Greg", "Mary", "Devon", "James"];
+console.log(people.indexOf("Foo"));
+</code></pre>
+
+
+        <!--code-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 9. Create a new variable called withBob and set it equal to the people array concatenated with the
+                string
+                of "Bob"?</h3>
+        </div>
+        <pre><code class="language-javascript match-braces rainbow-braces" data-prismjs-copy="Copy">
+let people = ["Greg", "Mary", "Devon", "James"];
+let withBob = people.concat("Bob");
+console.log(withBob);
+</code></pre>
+
+        <!--code-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 10. Sum of the Following Array?</h3>
+        </div>
+        <pre><code class="language-javascript match-braces rainbow-braces" data-prismjs-copy="Copy">
+let hassan = [1,2,3,4,5];
+var sum = 0;
+for(let i=0; i&lt;hassan.length; i++){
+sum += hassan[i];
+
+}
+console.log(sum);
+</code></pre>
+
+
+        <!--code-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 11. Array Reverse</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+    //Method 01
+let a = [1,2,3,4,5];
+var size = a.length;
+for(var i=size-1; i&gt;=0; i--){
+console.log(a[i]);
+}
+
+  //Method 02
+let a = [1,2,3,4,5];
+console.log(a.reverse());
+</code></pre>
+
+
+        <!--code-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 12. Write a JavaScript function to check whether an `input` is an array or not? </h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let check = [1,2,3,4,5,6,7]
+console.log(Array.isArray(check));
+</code></pre>
+
+
+
+
+        <!--EvenOdd Number-->
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 12. Write a JavaScript Program to Find Even &amp; Odd Number in Array? </h3>
+        </div>
+        <pre><code class="language-javascript match-braces rainbow-braces" data-prismjs-copy="Copy">
+//Method 01
+for(let i = 0; i&lt;a.length; i++){
+if(a[i]%2 =&equals; 0){
+    console.log("Even Number = " + a[i] );
+}else{
+    console.log("odd Number  = " + a[i] );
+}
+}
+//Method 02
+let a = [1,2,3,4,5];
+let b = a.filter(even =&gt; even%2==0);
+let c = a.filter(odd =&gt; odd%2 ==1);
+console.log("Even Number "+b);
+console.log("Odd Number "+c);
+</code></pre>
+
+
+
+
+        <!-- Date and Time Get and Set Methods -->
+        <img src="../images/datemethods.png" alt="date methods" width="100%" height="500px">
+        <h1 class="heading1" style="background-color: red;">JavaScript Date get and set Method</h1>
+        <p>By using javascript get method you can get the date and set method you can set the date according to your
+            neeed.</p>
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> JavaScript Date get Method</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+    let now = new Date();  //create Object
+    document.write(now);
+    document.write(&quot;&lt;br/&gt;&quot;);
+    // return complete date with days name
+    document.write(now.toDateString());
+    document.write(&quot;&lt;br/&gt;&quot;);
+    //get only Year
+    document.write(now.getFullYear());
+    document.write(&quot;&lt;br/&gt;&quot;);
+     //return only month number
+    document.write(now.getMonth());
+    document.write(&quot;&lt;br/&gt;&quot;);
+    //return only number date
+    document.write(now.getDate());
+	</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> JavaScript time get and set Method</h3>
+        </div>
+        <p>By using javascript get method you can get the date and set method you can set the time according to your
+            neeed.</p>
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> JavaScript time get Method</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+    let now = new Date();  //create Object
+    document.write(&quot;&lt;br/&gt; Javascript Time Get Methods&quot;);
+    document.write(&quot;&lt;br/&gt;&quot;);
+    document.write(&quot;Print Hours =&quot;+now.getHours());
+    document.write(&quot;&lt;br/&gt;&quot;);
+    document.write(&quot;Print Minutes =&quot;+now.getMinutes());
+    document.write(&quot;&lt;br/&gt;&quot;);
+    document.write(&quot;Print Second =&quot;+now.getSeconds());
+    document.write(&quot;&lt;br/&gt;&quot;);
+    document.write(&quot;Print MilliSecond =&quot;+now.getMilliseconds());
+	</code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> JavaScript time Set Method</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+    let now = new Date();  //create Object
+    now.setDate(14);
+    now.setFullYear(2022);
+    now.setMonth(4);
+    document.write(now);
+	</code></pre>
+
+
+        <h1 class="heading1" style="background-color: red;">DOM Append Methods</h1>
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> List of All Append Methods in JavaScript</h3>
+        </div>
+        <code class="markcode">let target = document.getElementById(&quot;demo&quot;);</code>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+target.appendChild();
+target.insertBefore();
+target.insertAdjacentElement();
+target.insertAdjacentHTML();
+target.insertAdjacentText();
+
+//Parameter that pass in InsertAdjacent
+<mark>beforeBegin</mark>
+afterBegin
+beforeend
+afterend
+</code></pre>
+
+        <img src="../images/append1.png" alt="" width="100%">
+        <img src="../images/append2.png" alt="append child" width="100%">
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 1.appendChild()</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+    let element = document.createElement('h1');
+    let text = document.createTextNode('This is Heading Text');
+    element.appendChild(text);
+    document.body.appendChild(element);
+
+    				//Second Method Two added the Comment
+    let element = document.createElement('h1');
+    let text = document.createTextNode('This is Heading Text');
+    element.appendChild(text);
+    let c = document.createComment("This is the Text");
+    element.appendChild(c);
+    document.body.appendChild(element);
+    </code></pre>
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 2.insertBefore()</h3>
+        </div>
+        <p class="hassanp"><code class="markcode">insertBefore()</code> method is used when we append the element then
+            element is default place in the last. when wo change the location last to first position then we use
+            insertBefore();.That means insertBefore() is used the insert new Element in the first location or your
+            prefered location, But in <code class="markcode">appendChild()</code> new element is store in the last of
+            existing element.In insertBefore() method first we pass the appendChild then location where the
+            appenedChild(_) is store.</p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+      let a = document.createElement("h5");
+      let b = document.createTextNode("Heading Five is used");
+      a.appendChild(b);
+      //id get from the html Using id
+      let target  = document.getElementById('abc');
+      //child Node prefer location 0 or
+      target.insertBefore(a,target.childNodes[0]); 1
+    </code></pre>
+
+
+
+        <img src="../images/append3.png" alt="" width="100%">
+        <img src="../images/append4.png" alt="" width="100%">
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 3.insertAdjacentElement()</h3>
+        </div>
+        <p class="hassanp">In this Method You can Insert New Element in 'beforeBegin', 'afterBegin', 'beforeEnd', or
+            'afterEnd' by passing the parameter and then append Element name mean Parent.</p>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+    &lt;body&gt;
+	&lt;div id=&quot;abc&quot; style=&quot;background-color:rgb(188, 241, 201)&quot;&gt;
+		&lt;p&gt;Click Me the linkExcepteur sit nulla excepteur nostrud.
+			Sunt culpa laborum irure dolore deserunt ad et fugiat ex amet
+			labore mollit. Aute dolor proident adipisicing enim incididunt
+			ut consectetur laborum consequat ea laborum et ullamco.
+		&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;script&gt;
+		let a = document.createElement(&quot;h1&quot;);
+		let b = document.createTextNode(&quot;Heading Five is used&quot;);
+		a.appendChild(b);
+		let target = document.getElementById('abc');
+		//target.insertAdjacentElement("beforeBegin",a);
+        target.insertAdjacentElement("afterBegin",a);
+        //target.insertAdjacentElement("beforeEnd",a);
+        //target.insertAdjacentElement("afterEnd",a);
+
+	&lt;/script&gt;
+&lt;/body&gt;
+    </code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 4.insertAdjacentHTML()</h3>
+        </div>
+        <p class="hassanp">method inserts a text as HTML, into a specified position.Legal position values are:
+            "afterbegin"
+            "afterend"
+            "beforebegin"
+            "beforeend"<br />
+            <span class="marku">Syntax:</span>
+            <code class="markcode">node.insertAdjacentHTML(position, text)</code>
+        </p><br />
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>position</td>
+                <td>text</td>
+                <td>Required. A position relative to the element.
+                    <b>Legal values:</b><br />
+                    "afterbegin" - After the beginning of the element (as the first child)<br />
+                    "afterend" - After the element<br />
+                    "beforebegin" - Before the element<br />
+                    "beforeend" - Before the end of the element (as the last child)
+                </td>
+            </tr>
+            <tr>
+                <td>position</td>
+                <td>text</td>
+                <td>The text you want to insert</td>
+            </tr>
+        </table>
+
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+let target  = document.getElementById('abc');
+let newElement = &quot;&lt;h1&gt;This is the Text&lt;/h1&gt;&quot;;
+target.insertAdjacentHTML(&quot;afterBegin&quot;,newElement);
+    </code></pre>
+
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> 4.insertAdjacentText()</h3>
+        </div>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+        &lt;body&gt;
+	&lt;div id=&quot;abc&quot; style=&quot;background-color:rgb(188, 241, 201)&quot;&gt;
+		&lt;p&gt;Click Me the linkExcepteur sit nulla excepteur nostrud.
+			Sunt culpa laborum irure dolore deserunt ad et fugiat ex amet
+			labore mollit. Aute dolor proident adipisicing enim incididunt
+			ut consectetur laborum consequat ea laborum et ullamco.
+		&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;script&gt;
+let target  = document.getElementById('abc');
+let newText = "New Text";
+target.insertAdjacentText("afterBegin",newText);
+
+	&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+
+
+
+        <!--
+
+<h5 class="heading1" style="color: white; background-color: red"></h5>
+
+ <div class="heading2" style="color: white; background-color: blue">
+            <h3> element.attribute = new value</h3>
+        </div>
+
+<p ></p>
+<span class="marku"></span>
+<code class="markcode"></code>
+<pre><code class="language-javascript match-braces" data-prismjs-copy="Copy"></code></pre>
+<h5 class="outputh">Output :</h5>
+<pre class="output">  30</pre>
+
+
+ <ul>
+    <li></li>
+  </ul>
+     -->
+
+
+        <h5 class="heading1" style="color: white; background-color: red">JavaScript Bulb on/off Simple Project</h5>
+        <pre><code class="language-javascript match-braces" data-prismjs-copy="Copy">
+     &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+ &lt;head&gt;
+ &lt;script&gt;
+ function lighton() {
+   document.getElementById('myimage').src = &quot;bulbon.gif&quot;;
+ }
+ function lightoff() {
+   document.getElementById('myimage').src = &quot;bulboff.gif&quot;;
+ }
+ &lt;/script&gt;
+ &lt;/head&gt;
+
+ &lt;body&gt;
+
+ &lt;img id=&quot;myimage&quot; src=&quot;bulboff.gif&quot; width=&quot;100&quot; height=&quot;180&quot; /&gt;
+ &lt;br/&gt;
+
+ &lt;button onclick = &quot;lighton()&quot;&gt;on Bulb &lt;/button&gt;
+ &lt;button onclick = &quot;lightoff()&quot;&gt;off Bulb &lt;/button&gt;
+
+ &lt;/body&gt;
+ &lt;/html&gt;
+     </code></pre>
+
+
+        <div class="heading2" style="color: white; background-color: blue">
+            <h3> Project Demo</h3>
+        </div>
+
+        <script>
+            function lighton() {
+                document.getElementById('myimage').src = "../images/bulbon.gif";
+            }
+            function lightoff() {
+                document.getElementById('myimage').src = "../images/bulboff.gif";
+            }
+        </script>
+
+        <center>
+            <br />
+            <img height="180" id="myimage" src="../images/bulboff.gif" width="100" />
+            <br />
+            <button onclick="lighton()"
+                style="background-color: yellow;font-size:18px;border:none;border-radius: 10px; width:100px; height:40px;cursor:pointer;">on
+                Bulb </button>
+            <button onclick="lightoff()"
+                style="background-color: #f1f1f1;font-size:18px;border:none;border-radius: 10px; width:100px; height:40px;cursor:pointer;">off
+                Bulb </button>
+        </center>
+
+<!--<h5 class="heading1" style="color: white; background-color: red"></h5>
+
+ <div class="heading2" style="color: white; background-color: blue">
+            <h3> element.attribute = new value</h3>
+        </div>
+
+<p ></p>
+<span class="marku"></span>
+<code class="markcode"></code>
+<pre><code class="language-javascript match-braces" data-prismjs-copy="Copy"></code></pre>
+<h5 class="outputh">Output :</h5>
+<pre class="output">  30</pre>
+
+
+ <ul>
+    <li></li>
+  </ul>
+     -->
+
+
+
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="../images/arrowup.png"
+                class="back-top"></button>
+    </div>
+
+      <script src="../js/javaScript.js"></script>
+</body>
+
+</html>

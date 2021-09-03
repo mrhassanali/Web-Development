@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS FlexBox counter Design</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex-container {
+      width: 80%;
+      margin: auto;
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .flex-box {
+      background: linear-gradient(purple, red);
+      width: 300px;
+      height: 180px;
+      font-size: 30px;
+      color: white;
+      border-radius: 10px;
+      flex: 1 1 10rem;
+    }
+
+    .icon {
+      width: 80px;
+      height: auto;
+      margin: 20px auto;
+      display: grid;
+      justify-content: center;
+    }
+
+    .alignnumber {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="flex-container">
+    <div class="wrapper">
+      <div class="flex-box">
+        <div class="icon"><i class="fab fa-facebook fa-2x"></i></div>
+        <p id="a" class="alignnumber"></p>
+      </div>
+      <div class="flex-box">
+        <div class="icon"><i class="fas fa-users fa-2x"></i></div>
+        <p id="b" class="alignnumber"></p>
+      </div>
+      <div class="flex-box">
+        <div class="icon a"><i class="fas fa-male fa-2x"></i></div>
+        <p id="c" class="alignnumber"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let a = document.getElementById("a");
+    let b = document.getElementById("b");
+    let c = document.getElementById("c");
+
+    let a_value = 80;
+    let b_value = 70;
+    let c_value = 60;
+
+
+
+    let counter = 0;
+
+    let ain = setInterval(() => {
+      if (counter == a_value) {
+        clearInterval(ain);
+      } else {
+        counter += 1;
+        a.innerHTML = counter + "%";
+      }
+    }, 20);
+
+
+
+    let bcounter = 0;
+    let bin = setInterval(() => {
+      if (bcounter == b_value) {
+        clearInterval(bin);
+      } else {
+        bcounter += 1;
+        b.innerHTML = bcounter + "%";
+      }
+    }, 20);
+
+    let ccounter = 0;
+    let cin = setInterval(() => {
+      if (ccounter == c_value) {
+        clearInterval();
+      } else {
+        ccounter += 1;
+        c.innerHTML = ccounter + " Person";
+      }
+    }, 20);
+  </script>
+  <script src="https://kit.fontawesome.com/991a8d9f0e.js" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

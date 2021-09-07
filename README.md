@@ -9,4 +9,11 @@ Copy the Blow Link and paste on google to download cheatSheet.
                                           https://1drv.ms/u/s!AhPJVTIhQW8vbG2qVahx5N1RkZM?e=GMs8FC
                                           
 
+VS Code Terminal Setting
 
+Press control + shift + P then search setting.json File then last you put this.
+
+    "terminal.integrated.fontSize":19,
+    "terminal.integrated.fontFamily":"consolas",
+    "terminal.integrated.fontWeight":"400",
+    
